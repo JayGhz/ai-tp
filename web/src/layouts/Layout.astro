@@ -22,18 +22,18 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body
-		class="relative flex flex-col min-h-screen text-black dark:text-white"
+		class="relative flex flex-col h-screen w-screen overflow-x-visible overflow-y-hidden text-black dark:text-white"
 	>
 		<div
-			class="absolute top-0 bottom-0 z-[-2] min-h-screen w-full
+			class="absolute top-0 bottom-0 z-[-2] h-full w-full
 	bg-gray-50 dark:bg-black
-	dark:bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(255,255,255,0.20),transparent_70%),linear-gradient(to_bottom,rgba(0,0,0,0.5),transparent_50%),linear-gradient(to_top,rgba(0,0,0,0.5),transparent_50%)]"
-		>
+	dark:bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(255,255,255,0.20),transparent_70%),linear-gradient(to_bottom,rgba(0,0,0,0.5),transparent_50%),linear-gradient(to_top,rgba(0,0,0,0.5),transparent_50%)]">
 		</div>
-	</body>
-	<Header />
-	<slot />
-	<Footer />
+		<Header />
+		<main class="flex-1 relative w-full h-full overflow-visible">
+			<slot />
+		</main>
+		<Footer />
 	<style is:global>
 		:root {
 			color-scheme: light dark;

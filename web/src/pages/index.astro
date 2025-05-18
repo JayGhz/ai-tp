@@ -8,9 +8,7 @@ import Graph from "@/components/Graph";
 ---
 
 <Layout title="AI-TP" description="Identificación de fraudes financieros">
-	<main class="flex-1 h-[calc(100vh-128px)] flex items-center justify-center overflow-hidden pb-[64px]">
-		<SectionContainer class="py-14 md:mt-24">
-			<Graph client:load />
-		</SectionContainer>
-	</main>
+	<SectionContainer class="h-full w-full relative">
+		<Graph client:load />
+	</SectionContainer>
 </Layout>
