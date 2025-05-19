@@ -29,7 +29,7 @@ export default function Graph() {
                         .linkColor(() => '#999999')
                         .linkWidth(1.5)
                         .linkDirectionalParticles(0)
-                        .d3Force('charge').strength(-15)
+                        .d3Force('charge').strength(-10)
                         .d3VelocityDecay(1)
                         .d3AlphaDecay(1)
                         .cameraPosition({ x: 0, y: 0, z: 2500 });
