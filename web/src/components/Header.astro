@@ -29,7 +29,7 @@ const navItems = [
   class="fixed top-2 botton-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-zinc-800/90 dark:text-zinc-200/75 justify-center items-center"
+    class="flex px-3 opacity-80 text-sm font-medium rounded-full dark:text-zinc-200/90 justify-center items-center"
   >
     {
       navItems.map((link) => (
@@ -93,7 +93,7 @@ const navItems = [
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
-    @apply dark:bg-black/30 bg-white/50;
+    @apply dark:bg-black/30 bg-[#f9fafb];
   }
 
   @keyframes nav-shadown {
