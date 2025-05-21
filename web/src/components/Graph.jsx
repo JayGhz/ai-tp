@@ -27,12 +27,12 @@ export default function Graph() {
                         .nodeColor(() => '#cccccc')
                         .nodeRelSize(5)
                         .linkColor(() => '#999999')
-                        .linkWidth(1.5)
+                        .linkWidth(2)
                         .linkDirectionalParticles(0)
                         .d3Force('charge').strength(-10)
                         .d3VelocityDecay(1)
                         .d3AlphaDecay(1)
-                        .cameraPosition({ x: 0, y: 0, z: 2500 });
+                        .cameraPosition({ x: 0, y: 0, z: 1500 });
                     
                     updateGraphDimensions();
                 })

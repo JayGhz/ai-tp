@@ -25,90 +25,92 @@ const { title, description } = Astro.props;
 		class="relative flex flex-col h-screen w-screen overflow-x-visible overflow-y-hidden text-black dark:text-white"
 	>
 		<div
-			class="absolute top-0 bottom-0 z-[-2] h-full w-full
-	bg-gray-50 dark:bg-black
-	dark:bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(255,255,255,0.20),transparent_70%),linear-gradient(to_bottom,rgba(0,0,0,0.5),transparent_50%),linear-gradient(to_top,rgba(0,0,0,0.5),transparent_50%)]">
+			class="absolute top-0 bottom-0 z-[-2] h-full w-full bg-gray-50 dark:bg-black
+		dark:bg-[radial-gradient(ellipse_70%_50%_at_50%_50%,rgba(255,255,255,0.20),transparent_70%),
+		linear-gradient(to_bottom,rgba(0,0,0,0.5),transparent_50%),linear-gradient(to_top,rgba(0,0,0,0.5),transparent_50%)]"
+		>
 		</div>
 		<Header />
 		<main class="flex-1 relative w-full h-full overflow-visible">
 			<slot />
 		</main>
 		<Footer />
-	<style is:global>
-		:root {
-			color-scheme: light dark;
-		}
-		html {
-			font-family: "Onest Variable", system-ui, sans-serif;
-			scroll-behavior: smooth;
-		}
-		body {
-			color: rgba(17, 17, 17, 0.9);
-			display: flex;
-			flex-direction: column;
-			height: 100vh;
-			margin: 0;
-			padding: 0;
-			overflow-x: hidden;
-			overscroll-behavior: none;
-		}
-
-		@media (prefers-reduced-motion: reduce) {
+		<style is:global>
+			:root {
+				color-scheme: light dark;
+			}
 			html {
-				scroll-behavior: auto;
+				font-family: "Onest Variable", system-ui, sans-serif;
+				scroll-behavior: smooth;
 			}
-		}
-
-		@media (prefers-color-scheme: dark) {
 			body {
-				color: rgba(255, 255, 255, 0.9);
-			}
-		}
-
-		#header-nav {
-			animation: blur linear both 0.5s;
-			animation-timeline: scroll();
-			animation-range: 0 500px;
-		}
-
-		@keyframes blur {
-			to {
-				backdrop-filter: blur(20px);
-				border-width: 1px;
-				border-color: rgba(0, 0, 0);
-				padding: 0.25rem 0.75rem;
+				color: rgba(17, 17, 17, 0.9);
 				display: flex;
-				flex-direction: row;
-				align-items: center;
-				background-color: rgb(229, 229, 229);
-				border-radius: 9999px;
+				flex-direction: column;
+				height: 100vh;
+				margin: 0;
+				padding: 0;
+				overflow-x: hidden;
+				overscroll-behavior: none;
 			}
-		}
 
-		@media (prefers-color-scheme: dark) {
-			@keyframes blur {
-				from {
-					border: 0px;
+			@media (prefers-reduced-motion: reduce) {
+				html {
+					scroll-behavior: auto;
 				}
+			}
+
+			@media (prefers-color-scheme: dark) {
+				body {
+					color: rgba(255, 255, 255, 0.9);
+				}
+			}
+
+			#header-nav {
+				animation: blur linear both 0.5s;
+				animation-timeline: scroll();
+				animation-range: 0 500px;
+			}
+
+			@keyframes blur {
 				to {
-					box-shadow:
-						0px 5px 50px -5px rgba(0, 0, 0, 0.1),
-						0px 0px 0 1px rgba(0, 0, 0, 0.3);
-					background: rgba(0, 0, 0, 0.3);
 					backdrop-filter: blur(20px);
 					border-width: 1px;
 					border-color: rgba(0, 0, 0);
-					padding-left: 0.75rem;
-					padding-right: 0.75rem;
-					padding-top: 0.25rem;
-					padding-bottom: 0.25rem;
+					padding: 0.25rem 0.75rem;
 					display: flex;
 					flex-direction: row;
 					align-items: center;
-					background-color: rgba(0, 0, 0, 0.3);
+					background-color: rgb(229, 229, 229);
 					border-radius: 9999px;
 				}
 			}
-		}
-	</style>
+
+			@media (prefers-color-scheme: dark) {
+				@keyframes blur {
+					from {
+						border: 0px;
+					}
+					to {
+						box-shadow:
+							0px 5px 50px -5px rgba(0, 0, 0, 0.1),
+							0px 0px 0 1px rgba(0, 0, 0, 0.3);
+						background: rgba(0, 0, 0, 0.3);
+						backdrop-filter: blur(20px);
+						border-width: 1px;
+						border-color: rgba(0, 0, 0);
+						padding-left: 0.75rem;
+						padding-right: 0.75rem;
+						padding-top: 0.25rem;
+						padding-bottom: 0.25rem;
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						background-color: rgba(0, 0, 0, 0.3);
+						border-radius: 9999px;
+					}
+				}
+			}
+		</style>
+	</body>
 </html>
