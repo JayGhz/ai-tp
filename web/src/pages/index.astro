@@ -1,14 +1,11 @@
 ---
-import Layout from "../layouts/Layout.astro";
-
-
-import SectionContainer from "../components/SectionContainer.astro";
-import Graph from "@/components/Graph.jsx";
-
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import ContentManager from "@/components/ContentManager.tsx";
 ---
 
 <Layout title="AI-TP" description="Identificación de fraudes financieros">
 	<SectionContainer class="h-full w-full relative">
-		<Graph client:load />
+		<ContentManager client:only="react" />
 	</SectionContainer>
 </Layout>

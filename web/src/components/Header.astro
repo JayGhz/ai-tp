@@ -3,24 +3,29 @@ import ThemeToggle from "./ThemeToggle.astro";
 
 const navItems = [
   {
+    title: "Inicio",
+    label: "inicio",
+    url: "graph",
+  },
+  {
     title: "DataFrame",
     label: "DataFrame",
-    url: "/#dataFrame",
+    url: "dataframe",
+  },
+  {
+    title: "EDA",
+    label: "EDA",
+    url: "eda",
   },
   {
     title: "Modelo RNA",
     label: "Modelo RNA",
-    url: "/#modelo-RNA",
+    url: "modelo",
   },
   {
     title: "Predicción",
     label: "prediccion",
-    url: "/#prediccion",
-  },
-  {
-    title: "Sobre nosotros",
-    label: "sobre-nosotros",
-    url: "/#sobre-nosotros",
+    url: "prediccion",
   },
 ];
 ---
@@ -32,13 +37,14 @@ const navItems = [
     class="flex px-3 opacity-80 text-sm font-medium rounded-full dark:text-zinc-200/90 justify-center items-center"
   >
     {
-      navItems.map((link) => (
+      navItems.map(({ url, title, label }) => (
         <a
-          class="relative block px-2 py-2 transition hover hover:text-black hover:font-bold dark:hover:text-white dark:hover:font-bold"
-          aria-label={link.label}
-          href={link.url}
+          class="relative block px-2 py-2 transition hover hover:text-black hover:font-bold dark:hover:text-white dark:hover:font-bold nav-item"
+          href="#"
+          data-section={url.replace("#", "")}
+          aria-label={label}
         >
-          {link.title}
+          {title}
         </a>
       ))
     }
@@ -47,45 +53,56 @@ const navItems = [
 </header>
 
 <script>
-  document.addEventListener("astro:page-load", () => {
-    const sections = document.querySelectorAll("section");
-    const navItems = document.querySelectorAll("header nav a");
+  function handleNavClick(event: any) {
+    event.preventDefault();
+    
+    const navItems = document.querySelectorAll(".nav-item");
+    
+    navItems.forEach(item => {
+      item.classList.remove("text-blue-500", "font-bold");
+    });
+    
+    event.currentTarget.classList.add("text-blue-500", "font-bold");
 
-    const callback = (entries: any[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          navItems.forEach((item) => {
-            if (item.getAttribute("aria-label") == entry.target.id) {
-              item.classList.add("text-blue-500");
-            } else {
-              item.classList.remove("text-blue-500");
-            }
-          });
-        }
-      });
-    };
+    const section = event.currentTarget.getAttribute("data-section");
+    
+    const customEvent = new CustomEvent("sectionChange", {
+      detail: { section: section || "graph" },
+      bubbles: true
+    });
+    
+    document.dispatchEvent(customEvent);
+  }
 
-    const observer = new IntersectionObserver(callback, {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.3,
+  function initNavigation() {
+    const navItems = document.querySelectorAll(".nav-item");
+    let activeItem = null;
+
+    navItems.forEach(item => {
+      item.removeEventListener("click", handleNavClick);
+      item.addEventListener("click", handleNavClick);
     });
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    // Cleanup function
-    document.onvisibilitychange = () => {
-      if (document.visibilityState === "hidden") {
-        observer.disconnect();
-      } else {
-        sections.forEach((section) => {
-          observer.observe(section);
+    if (navItems.length > 0 && !activeItem) {
+      navItems[0].classList.add("text-blue-500", "font-bold");
+      activeItem = navItems[0];
+      
+      const initialSection = navItems[0].getAttribute("data-section");
+      
+      setTimeout(() => {
+        const initialEvent = new CustomEvent("sectionChange", {
+          detail: { section: initialSection || "graph" },
+          bubbles: true
         });
-      }
-    };
-  });
+        
+        document.dispatchEvent(initialEvent);
+      }, 100);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", initNavigation);
+  
+  document.addEventListener("astro:page-load", initNavigation);
 </script>
 
 <style>

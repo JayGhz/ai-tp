@@ -1,0 +1,54 @@
+{
+  "fraud_distribution": [
+    {
+      "label": "Legit",
+      "value": 988970
+    },
+    {
+      "label": "Fraud",
+      "value": 11030
+    }
+  ],
+  "income_by_fraud": [
+    {
+      "label": "Legit",
+      "value": 0.58
+    },
+    {
+      "label": "Fraud",
+      "value": 0.69
+    }
+  ],
+  "fraud_rate_by_employment": [
+    {
+      "label": "CA",
+      "value": 1.29
+    },
+    {
+      "label": "CB",
+      "value": 0.65
+    },
+    {
+      "label": "CC",
+      "value": 1.25
+    },
+    {
+      "label": "CD",
+      "value": 0.29
+    },
+    {
+      "label": "CF",
+      "value": 0.18
+    }
+  ],
+  "avg_velocity_6h": [
+    {
+      "label": "Legit",
+      "value": 5494.92
+    },
+    {
+      "label": "Fraud",
+      "value": 5133.72
+    }
+  ]
+}
