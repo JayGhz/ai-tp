@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import type { CSSProperties, ReactNode } from "react";
 
-export function AnimatedBar({
+export function AnimatedBarVertical({
   index = 0,
   children,
   style,
@@ -14,12 +14,16 @@ export function AnimatedBar({
 }) {
   return (
     <motion.div
-      initial={{ transform: "translateX(-100%)" }}
-      animate={{ transform: "translateX(0)" }}
+      initial={{ scaleY: 0 }}
+      animate={{ scaleY: 1 }}
+      style={{
+        transformOrigin: "bottom",
+        pointerEvents: "none",
+        ...style,
+      }}
       className="absolute inset-0"
-      style={{ pointerEvents: "none", ...style }}
       transition={{
-        duration: 0.5,
+        duration: 0.8,
         ease: "easeOut",
         delay: index * 0.075,
       }}

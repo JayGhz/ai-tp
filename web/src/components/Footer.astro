@@ -5,16 +5,16 @@ const currentYear = new Date().getFullYear();
 ---
 
 <footer
-  class="absolute bottom-0 left-0 right-0 z-10 opacity-80 my-4 min-[375px]:pl-4 md:pl-0 mt-8 w-full mx-auto 
+  class="absolute bottom-0 left-0 right-0 z-10 opacity-80 my-4 min-[375px]:pl-4 md:pl-0 mt-8 w-full mx-auto
   container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-cente rounded-full"
 >
   <div
     class="rounded-lg w-full max-w-screen-xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between py-3"
   >
-    <div class="flex justify-center md:justify-start mb-4 ml-6 md:mb-0">
-      <span
-        class="text-sm sm:text-center text-zinc-800/90 dark:text-zinc-200/90"
-      >
+    <div
+      class="justify-center hidden md:flex md:justify-start mb-4 ml-6 md:mb-0"
+    >
+      <span class="text-sm text-zinc-800/90 dark:text-zinc-200/90">
         © {currentYear}
         Grupo 1
       </span>
@@ -26,7 +26,10 @@ const currentYear = new Date().getFullYear();
         <a href="/#sobre-nosotros" class="hover:underline">Sobre nosotros</a>
       </li>
       <li>
-        <a href="https://github.com/JayGhz/ai-tp" class="flex items-center hover:underline">
+        <a
+          href="https://github.com/JayGhz/ai-tp"
+          class="flex items-center hover:underline"
+        >
           <GitHub class="size-4 font-bold" />
           <span class="ml-1">Repositorio</span>
         </a>
@@ -52,4 +55,3 @@ const currentYear = new Date().getFullYear();
     }
   }
 </style>
-
