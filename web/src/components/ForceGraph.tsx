@@ -137,7 +137,7 @@ export default function ForceGraph({
                 .d3Force('charge', d3.forceManyBody().strength(d3ChargeStrength))
                 .d3VelocityDecay(d3VelocityDecay)
                 .d3AlphaDecay(d3AlphaDecay);
-                
+
 
             if (cameraPosition) {
                 Graph.cameraPosition(cameraPosition, cameraLookAt, cameraTransitionMs);
@@ -191,7 +191,7 @@ export default function ForceGraph({
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                top: 0,
+                top: 360,
                 left: 0,
                 right: 0,
                 bottom: 0,
