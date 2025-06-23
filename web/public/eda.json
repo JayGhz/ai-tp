@@ -1,54 +1,210 @@
 {
-  "fraud_distribution": [
+  "horizontalBar": [
     {
-      "label": "Legit",
-      "value": 988970
+      "key": "BC",
+      "value": 33.61,
+      "color": "#B89DFB"
     },
     {
-      "label": "Fraud",
-      "value": 11030
+      "key": "BB",
+      "value": 30.19,
+      "color": "#758bcf"
+    },
+    {
+      "key": "BA",
+      "value": 21.49,
+      "color": "#33C2EA"
+    },
+    {
+      "key": "BE",
+      "value": 11.86,
+      "color": "#FFC182"
+    },
+    {
+      "key": "Others",
+      "value": 2.84,
+      "color": "#87db72"
     }
   ],
-  "income_by_fraud": [
+  "verticalBar": [
     {
-      "label": "Legit",
-      "value": 0.58
+      "key": "CA",
+      "value": 68.5,
+      "color": "#33C2EA"
     },
     {
-      "label": "Fraud",
-      "value": 0.69
+      "key": "CB",
+      "value": 13.42,
+      "color": "#33C2EA"
+    },
+    {
+      "key": "CC",
+      "value": 8.94,
+      "color": "#33C2EA"
+    },
+    {
+      "key": "CF",
+      "value": 4.52,
+      "color": "#33C2EA"
+    },
+    {
+      "key": "Others",
+      "value": 4.62,
+      "color": "#33C2EA"
     }
   ],
-  "fraud_rate_by_employment": [
+  "lineChart": [
     {
-      "label": "CA",
-      "value": 1.29
+      "date": "2022-01-30",
+      "value": 80026
     },
     {
-      "label": "CB",
-      "value": 0.65
+      "date": "2022-02-30",
+      "value": 105278
     },
     {
-      "label": "CC",
-      "value": 1.25
+      "date": "2022-03-30",
+      "value": 142614
     },
     {
-      "label": "CD",
-      "value": 0.29
+      "date": "2022-04-30",
+      "value": 156546
     },
     {
-      "label": "CF",
-      "value": 0.18
+      "date": "2022-05-30",
+      "value": 126368
+    },
+    {
+      "date": "2022-06-30",
+      "value": 147496
+    },
+    {
+      "date": "2022-07-30",
+      "value": 136092
+    },
+    {
+      "date": "2022-08-30",
+      "value": 105580
     }
   ],
-  "avg_velocity_6h": [
+  "areaChart": [
     {
-      "label": "Legit",
-      "value": 5494.92
+      "date": "2022-01-01",
+      "value": 123.1
     },
     {
-      "label": "Fraud",
-      "value": 5133.72
+      "date": "2022-01-10",
+      "value": 111.5
+    },
+    {
+      "date": "2022-01-20",
+      "value": 69.6
+    },
+    {
+      "date": "2022-02-01",
+      "value": 137.3
+    },
+    {
+      "date": "2022-02-10",
+      "value": 82.6
+    },
+    {
+      "date": "2022-02-20",
+      "value": 129.1
+    },
+    {
+      "date": "2022-03-01",
+      "value": 81.0
+    },
+    {
+      "date": "2022-03-10",
+      "value": 120.1
+    },
+    {
+      "date": "2022-03-20",
+      "value": 104.8
+    },
+    {
+      "date": "2022-04-01",
+      "value": 135.3
+    },
+    {
+      "date": "2022-04-10",
+      "value": 179.6
+    },
+    {
+      "date": "2022-04-20",
+      "value": 181.3
+    },
+    {
+      "date": "2022-05-01",
+      "value": 118.9
+    },
+    {
+      "date": "2022-05-10",
+      "value": 112.9
+    },
+    {
+      "date": "2022-05-20",
+      "value": 149.5
+    },
+    {
+      "date": "2022-06-01",
+      "value": 120.3
+    },
+    {
+      "date": "2022-06-10",
+      "value": 133.3
+    },
+    {
+      "date": "2022-06-20",
+      "value": 134.1
+    },
+    {
+      "date": "2022-07-01",
+      "value": 160.1
+    },
+    {
+      "date": "2022-07-10",
+      "value": 155.0
+    },
+    {
+      "date": "2022-07-20",
+      "value": 171.8
+    },
+    {
+      "date": "2022-08-01",
+      "value": 144.8
+    },
+    {
+      "date": "2022-08-10",
+      "value": 167.7
+    },
+    {
+      "date": "2022-08-20",
+      "value": 159.3
+    }
+  ],
+  "pieChart": [
+    {
+      "name": "AB",
+      "value": 39.91
+    },
+    {
+      "name": "AA",
+      "value": 24.96
+    },
+    {
+      "name": "AC",
+      "value": 24.66
+    },
+    {
+      "name": "AD",
+      "value": 10.45
+    },
+    {
+      "name": "AE",
+      "value": 0.03
     }
   ]
 }
