@@ -22,7 +22,7 @@ const { title, description } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body
-		class="relative flex flex-col h-screen w-screen overflow-x-visible overflow-y-hidden text-black dark:text-white"
+		class="relative flex flex-col min-h-screen w-screen overflow-x-visible overflow-y-auto text-black dark:text-white"
 	>
 		<div
 			class="absolute top-0 bottom-0 z-[-2] h-full w-full bg-gray-50 
@@ -46,10 +46,11 @@ const { title, description } = Astro.props;
 				color: rgba(17, 17, 17, 0.9);
 				display: flex;
 				flex-direction: column;
-				height: 100vh;
+				min-height: 100vh;
 				margin: 0;
 				padding: 0;
 				overflow-x: hidden;
+				overflow-y: auto;
 				overscroll-behavior: none;
 			}
 

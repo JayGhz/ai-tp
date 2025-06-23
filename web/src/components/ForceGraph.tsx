@@ -191,7 +191,7 @@ export default function ForceGraph({
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                top: -25,
+                top: 360,
                 left: 0,
                 right: 0,
                 bottom: 0,
