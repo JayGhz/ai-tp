@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import { scaleBand, scaleLinear, max, tickStep, format } from "d3";
 import { AnimatedBarVertical } from "@/components/ui/AnimatedBarVertical";
@@ -12,18 +13,18 @@ import {
 
 import type { Datum } from "@/components/ui/TooltipBar";
 
-const data: Datum[] = [
-  { key: "TC", value: 18.1, color: "#33C2EA" },
-  { key: "UT", value: 14.3, color: "#33C2EA" },
-  { key: "EN", value: 27.1, color: "#33C2EA" },
-  { key: "CY", value: 40, color: "#33C2EA" },
-  { key: "DF", value: 12.7, color: "#33C2EA" },
-  { key: "WT", value: 24.7, color: "#33C2EA" },
-  { key: "WHO", value: 29.7, color: "#33C2EA" },
-];
-
 function BarChartVerticalContent() {
-  const minBars = 7;
+  const [data, setData] = useState<Datum[]>([]);
+
+  useEffect(() => {
+    fetch("/eda.json")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json.verticalBar || []);
+      });
+  }, []);
+
+  const minBars = 5;
   const filledData: Datum[] = [
     ...data,
     ...Array.from({ length: Math.max(0, minBars - data.length) }, (_, i) => ({
@@ -64,62 +65,57 @@ function BarChartVerticalContent() {
       {/* Y axis */}
       <div
         className="relative
-            h-[calc(100%-var(--marginTop)-var(--marginBottom))]
-            w-[var(--marginLeft)]
-            translate-y-[var(--marginTop)]
-            overflow-visible"
+          h-[calc(100%-var(--marginTop)-var(--marginBottom))]
+          w-[var(--marginLeft)]
+          translate-y-[var(--marginTop)]
+          overflow-visible"
       >
-        {yScale
-          .ticks(idealTickCount)
-          .map((value, i) => (
-            <div
-              key={i}
-              style={{
-                top: `${yScale(value)}%`,
-              }}
-              className="absolute text-xs tabular-nums -translate-y-1/2 dark:text-zinc-400 w-full text-right pr-2"
-            >
-              {value}
-            </div>
-          ))}
+        {yScale.ticks(idealTickCount).map((value, i) => (
+          <div
+            key={i}
+            style={{ top: `${yScale(value)}%` }}
+            className="absolute text-xs tabular-nums -translate-y-1/2 dark:text-zinc-400 w-full text-right pr-2"
+          >
+            {value}
+          </div>
+        ))}
       </div>
 
-      {/* Chart Area */}
+      {/* Chart area + bars */}
       <div
         className="absolute inset-0
-            h-[calc(100%-var(--marginTop)-var(--marginBottom))]
-            w-[calc(100%-var(--marginLeft)-var(--marginRight))]
-            translate-x-[var(--marginLeft)]
-            translate-y-[var(--marginTop)]
-            overflow-visible"
+          h-[calc(100%-var(--marginTop)-var(--marginBottom))]
+          w-[calc(100%-var(--marginLeft)-var(--marginRight))]
+          translate-x-[var(--marginLeft)]
+          translate-y-[var(--marginTop)]
+          overflow-visible"
       >
         <svg
           viewBox="0 0 100 100"
           className="overflow-visible w-full h-full"
           preserveAspectRatio="none"
         >
-          {yScale
-            .ticks(idealTickCount)
-            .map((active, i) =>
-              active === 0 ? null : (
-                <g
-                  key={i}
-                  transform={`translate(0,${yScale(active)})`}
-                  className="text-zinc-600 dark:text-zinc-400"
-                >
-                  <line
-                    x1={0}
-                    x2={100}
-                    stroke="currentColor"
-                    strokeDasharray="6,5"
-                    strokeWidth={0.5}
-                    vectorEffect="non-scaling-stroke"
-                  />
-                </g>
-              )
-            )}
+          {yScale.ticks(idealTickCount).map((active, i) =>
+            active === 0 ? null : (
+              <g
+                key={i}
+                transform={`translate(0,${yScale(active)})`}
+                className="text-zinc-600 dark:text-zinc-400"
+              >
+                <line
+                  x1={0}
+                  x2={100}
+                  stroke="currentColor"
+                  strokeDasharray="6,5"
+                  strokeWidth={0.5}
+                  vectorEffect="non-scaling-stroke"
+                />
+              </g>
+            )
+          )}
         </svg>
 
+        {/* Labels */}
         {data.map((entry, i) => {
           const xPosition = xScale(entry.key)! + xScale.bandwidth() / 2;
           return (
@@ -141,6 +137,7 @@ function BarChartVerticalContent() {
           );
         })}
 
+        {/* Bars */}
         {filledData.map((d, index) => {
           if (d.value === 0) return null;
 
@@ -172,6 +169,7 @@ function BarChartVerticalContent() {
         })}
       </div>
 
+      {/* Tooltip */}
       {tooltip && (
         <TooltipBarContent>
           <div className="flex items-center gap-2">

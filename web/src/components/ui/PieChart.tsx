@@ -1,22 +1,28 @@
 import { AnimatedSlice } from "@/components/ui/AnimatedSlice";
 import { pie, arc } from "d3";
 import type { PieArcDatum } from "d3";
+import { useEffect, useState } from "react";
 
 type Item = { name: string; value: number };
-const data: Item[] = [
-  { name: "AAPL", value: 23 },
-  { name: "BTC", value: 18 },
-  { name: "GOLD", value: 11 },
-  { name: "PLTR", value: 9 },
-  { name: "ADA", value: 7 },
-  { name: "MSFT", value: 3 },
-];
 
 export function AnimatedDonutChart({
   singleColor,
 }: {
   singleColor?: "purple" | "blue" | "fuchsia" | "yellow";
 }) {
+
+  const [data, setData] = useState<Item[]>([]);
+  useEffect(() => {
+    fetch("/eda.json")
+      .then((res) => res.json())
+      .then((json) => {
+        const pieData = json.pieChart || [];
+        setData(pieData);
+      });
+  }, []);
+
+  if (data.length === 0) return null;
+
   const radius = 420; // Chart base dimensions
   const gap = 0.01; // Gap between slices
   const lightStrokeEffect = 10; // 3d light effect around the slice
@@ -61,11 +67,11 @@ export function AnimatedDonutChart({
   };
 
   return (
-    <div className="relative mt-1">
+    <div className="relative mt-4">
             <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-center">
           <p className={`text-lg text-zinc-500`}>Total</p>
-          <p className={`text-4xl transition-colors duration-300 font-bold`}>184</p>
+          <p className={`text-4xl transition-colors duration-300 font-bold`}>1M</p>
         </div>
       </div>
       <svg
@@ -103,7 +109,8 @@ export function AnimatedDonutChart({
                 <text transform={`translate(${centroid})`} textAnchor="middle" fontSize={38} className={textColorClass}>
                   <tspan
                     y="-0.4em"
-                    fontWeight="600"
+                    fontWeight="700"
+                    fontSize={56}
                   >
                     {d.data.name}
                   </tspan>
@@ -111,7 +118,7 @@ export function AnimatedDonutChart({
                     <tspan
                       x={0}
                       y="0.7em"
-                      fillOpacity={0.7}
+                      fillOpacity={1.2}
                     >
                       {d.data.value.toLocaleString("en-US")}%
                     </tspan>
