@@ -1,4 +1,6 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import type { CSSProperties } from "react";
 import type { Datum } from "@/components/ui/TooltipBar";
 import { scaleBand, scaleLinear, max, format } from "d3";
@@ -10,26 +12,20 @@ import {
 } from "@/components/ui/TooltipBar";
 import { AnimatedBar } from "@/components/ui/AnimatedBar";
 
-function HorizontalBarChartContent() {
-  const data: Datum[] = [
-    { key: "Technology", value: 38.1, color: "#F5A5DB" },
-    { key: "Financials", value: 25.3, color: "#B89DFB" },
-    { key: "Energy", value: 23.1, color: "#758bcf" },
-    { key: "Cyclical", value: 19.5, color: "#33C2EA" },
-    { key: "Defensive", value: 14.7, color: "#FFC182" },
-    { key: "Utilities", value: 5.8, color: "#87db72" },
-  ].toSorted((a, b) => b.value - a.value);
+// Componente que recibe los datos como prop
+function HorizontalBarChartContent({ data }: { data: Datum[] }) {
+  const sortedData = [...data].sort((a, b) => b.value - a.value);
 
   const yScale = scaleBand<string>()
-    .domain(data.map((d) => d.key))
+    .domain(sortedData.map((d) => d.key))
     .range([0, 100])
     .padding(0.175);
 
   const xScale = scaleLinear()
-    .domain([0, max(data.map((d) => d.value)) ?? 0])
+    .domain([0, max(sortedData.map((d) => d.value)) ?? 0])
     .range([0, 100]);
 
-  const longestWord = max(data.map((d) => d.key.length)) || 1;
+  const longestWord = max(sortedData.map((d) => d.key.length)) || 1;
 
   const { tooltip } = useTooltipBarContext("HorizontalBarChart");
 
@@ -49,13 +45,13 @@ function HorizontalBarChartContent() {
       <div
         className="absolute inset-0
                     z-10
-                    h-[calc(100%-var(--marginTop)-var(--marginBottom))]
-                    w-[calc(100%-var(--marginLeft)-var(--marginRight))]
-                    translate-x-[var(--marginLeft)]
-                    translate-y-[var(--marginTop)]
+                    h-[calc(100%-var(--marginTop)-var(--marginBottom))] 
+                    w-[calc(100%-var(--marginLeft)-var(--marginRight))] 
+                    translate-x-[var(--marginLeft)] 
+                    translate-y-[var(--marginTop)] 
                     overflow-hidden"
       >
-        {data.map((d, i) => {
+        {sortedData.map((d, i) => {
           const topPerc = yScale(d.key)!;
           const heightPerc = yScale.bandwidth();
           const widthPerc = xScale(d.value);
@@ -114,13 +110,13 @@ function HorizontalBarChartContent() {
 
       {/* Y axis */}
       <svg
-        className="absolute inset-0
-                    h-[calc(100%-var(--marginTop)-var(--marginBottom))]
-                    translate-y-[var(--marginTop)]
+        className="absolute inset-0 
+                    h-[calc(100%-var(--marginTop)-var(--marginBottom))] 
+                    translate-y-[var(--marginTop)] 
                     overflow-visible"
       >
         <g className="translate-x-[calc(var(--marginLeft)-8px)]">
-          {data.map((entry) => {
+          {sortedData.map((entry) => {
             const y = yScale(entry.key)! + yScale.bandwidth() / 2;
             return (
               <text
@@ -141,11 +137,11 @@ function HorizontalBarChartContent() {
 
       {/* X axis */}
       <svg
-        className="absolute inset-0
-                    w-[calc(100%-var(--marginLeft)-var(--marginRight))]
-                    translate-x-[var(--marginLeft)]
-                    h-[calc(100%-var(--marginBottom))]
-                    translate-y-4
+        className="absolute inset-0 
+                    w-[calc(100%-var(--marginLeft)-var(--marginRight))] 
+                    translate-x-[var(--marginLeft)] 
+                    h-[calc(100%-var(--marginBottom))] 
+                    translate-y-4 
                     overflow-visible"
       >
         <g className="overflow-visible">
@@ -185,9 +181,24 @@ function HorizontalBarChartContent() {
 }
 
 export function HorizontalBarChart() {
+  const [data, setData] = useState<Datum[] | null>(null);
+
+  useEffect(() => {
+    fetch("/eda.json")
+      .then((res) => res.json())
+      .then((json) => {
+        setData(json.horizontalBar);
+      })
+      .catch((err) => console.error("Error loading EDA data:", err));
+  }, []);
+
+  if (!data) {
+    return null
+  }
+
   return (
     <TooltipBar>
-      <HorizontalBarChartContent />
+      <HorizontalBarChartContent data={data} />
     </TooltipBar>
   );
 }
