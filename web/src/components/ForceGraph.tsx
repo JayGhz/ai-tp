@@ -70,7 +70,7 @@ export default function ForceGraph({
     height,
     showNavInfo = false,
     backgroundColor = '#0000',
-    nodeColor = () => '#cccccc',
+    nodeColor = () => '#c2c6c7',
     nodeRelSize = 6,
     linkColor = () => '#999999',
     linkWidth = 1.25,
