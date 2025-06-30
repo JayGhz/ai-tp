@@ -75,7 +75,7 @@ export default function ForceGraph({
     linkColor = () => '#999999',
     linkWidth = 1.25,
     linkDirectionalParticles = 0,
-    d3ChargeStrength = -13,
+    d3ChargeStrength = -15,
     d3VelocityDecay = 0.4,
     d3AlphaDecay = 0.07,
     cameraPosition = { x: 0, y: 2000, z: 100 },
@@ -191,7 +191,7 @@ export default function ForceGraph({
                 justifyContent: 'center',
                 alignItems: 'center',
                 position: 'absolute',
-                top: 360,
+                top: `${window.innerHeight * 0.46}px`, // Makes top position responsive to screen height
                 left: 0,
                 right: 0,
                 bottom: 0,
