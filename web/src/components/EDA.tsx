@@ -6,37 +6,48 @@ import { BarChartVertical } from "@/components/ui/VerticalBarChart";
 
 export default function EDA() {
     return (
-        <div className="md:p-[5.8em] mx-32 mt-16 md:mt-[-25px]">
-            <div className="grid grid-cols-2 grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 gap-2">
+        <div className="md:p-[5em] mx-8 lg:m-28 mt-24 lg:mt-0 lg:mb-12 mb-32 md:mt-4">
+            
+            <div className="grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-8 lg:gap-4">
                 <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
                     <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Distribución por tipo de empleo
                     </div>
                     <HorizontalBarChart />
                 </div>
-                <div className="border border-zinc-300 dark:border-zinc-200/20  rounded-xl p-6">
-                    <div className="text-sm dark:text-zinc-200/90  font-semibold text-center">
+
+                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
+                    <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Distribución por tipo de vivienda
                     </div>
                     <AnimatedDonutChart />
                 </div>
-                <div className="border border-zinc-300 dark:border-zinc-200/20  rounded-xl p-6">
-                    <div className="text-sm dark:text-zinc-200/90  font-semibold text-center">
+
+                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
+                    <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Métodos de pago
                     </div>
                     <BarChartVertical />
                 </div>
-                <div className="border border-zinc-300 dark:border-zinc-200/20  rounded-xl p-6">
-                    <div className="text-sm dark:text-zinc-200/90  font-semibold text-center">
+
+                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
+                    <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Transacciones por mes
                     </div>
                     <AnimatedLineChart />
                 </div>
-                <div className="border border-zinc-300 dark:border-zinc-200/20 col-span-2 rounded-xl p-6">
-                    <div className="text-sm dark:text-zinc-200/90  font-semibold text-center">
+            </div>
+
+            <div className="lg:my-12 my-9" />
+
+            <div className="grid grid-cols-1">
+                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-8 lg:col-span-2 h-[400px]">
+                    <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Evolución del score de riesgo
                     </div>
-                    <AnimatedOutlinedAreaChart />
+                    <div className="w-full h-full">
+                        <AnimatedOutlinedAreaChart />
+                    </div>
                 </div>
             </div>
         </div>
