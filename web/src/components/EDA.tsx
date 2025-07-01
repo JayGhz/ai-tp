@@ -41,7 +41,7 @@ export default function EDA() {
             <div className="lg:my-12 my-9" />
 
             <div className="grid grid-cols-1">
-                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-8 lg:col-span-2 h-[400px]">
+                <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6 lg:col-span-2 h-[400px] md:mb-[-60px] lg:mb-0">
                     <div className="text-sm dark:text-zinc-200/90 font-semibold text-center">
                         Evolución del score de riesgo
                     </div>
