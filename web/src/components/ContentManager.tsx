@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import ForceGraph from '@/components/ForceGraph';
-import { DataFrame } from '@/components/DataFrame';
 import ModeloRNA from '@/components/ModeloRNA';
 import Prediccion from '@/components/Prediccion';
 import EDA from '@/components/EDA';
+import { Dataset } from '@/components/Dataset';
 
 declare global {
     interface Window {
@@ -72,8 +72,8 @@ export default function ContentManager() {
         switch (activeComponent) {
             case 'graph':
                 return <ForceGraph />; 
-            case 'dataframe':
-                return <DataFrame />;
+            case 'dataset':
+                return <Dataset />;
             case 'modelo':
                 return <ModeloRNA />;
             case 'prediccion':

@@ -162,19 +162,18 @@ export default function ForceGraph({
             }
         };
     }, [
-        graphData, // Se re-ejecuta si la prop graphData cambia
+        graphData,
         showNavInfo, backgroundColor, nodeColor, nodeRelSize, linkColor, linkWidth,
         linkDirectionalParticles, d3ChargeStrength, d3VelocityDecay, d3AlphaDecay,
         cameraPosition, cameraLookAt, cameraTransitionMs, updateGraphDimensions,
-        internalGraphData, loadingInternalData, internalError // Dependencias para la carga interna
+        internalGraphData, loadingInternalData, internalError
     ]);
 
-    // Efecto separado para actualizar graphData cuando currentGraphData cambia DESPUÉS de la inicialización
     useEffect(() => {
         if (graphRef.current && currentGraphData) {
             graphRef.current.graphData(currentGraphData);
         }
-    }, [currentGraphData]); // Solo se ejecuta si los datos activos cambian
+    }, [currentGraphData]);
 
     useEffect(() => {
         window.addEventListener('resize', updateGraphDimensions);
@@ -190,8 +189,8 @@ export default function ForceGraph({
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                position: 'absolute',
-                top: `${window.innerHeight * 0.46}px`, // Makes top position responsive to screen height
+                position: 'fixed',
+                top: 0,
                 left: 0,
                 right: 0,
                 bottom: 0,
