@@ -73,10 +73,67 @@ export default function ForceGraph({
     }
   }, [width, height]);
 
+  // Inicializar el grafo SOLO una vez
   useEffect(() => {
     if (!containerRef.current) return;
     const container = containerRef.current;
+    if (!graphRef.current) {
+      try {
+        const Graph = new (ForceGraph3D as any)(container);
+        graphRef.current = Graph;
+        Graph.showNavInfo(showNavInfo)
+          .backgroundColor(backgroundColor)
+          .nodeColor((node: Node) => node.fraud ? '#27c0ff' : '#c2c6c7')
+          .nodeRelSize(nodeRelSize)
+          .linkColor((link: Link) => {
+            const getNode = (n: any) =>
+              typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
+            const source = getNode(link.source);
+            const target = getNode(link.target);
+            return source?.fraud || target?.fraud ? '#27c0ff' : '#d3d3d3';
+          })
+          .linkWidth((link: Link) => {
+            const getNode = (n: any) =>
+              typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
+            const source = getNode(link.source);
+            const target = getNode(link.target);
+            return source?.fraud || target?.fraud ? 3 : 0.5;
+          })
+          .linkDirectionalParticles((link: Link) => {
+            const getNode = (n: any) =>
+              typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
+            const source = getNode(link.source);
+            const target = getNode(link.target);
+            return source?.fraud || target?.fraud ? 10 : 0;
+          })
+          .linkDirectionalParticleWidth(() => 2)
+          .linkDirectionalParticleColor(() => '#27c0ff')
+          .d3Force('charge', d3.forceManyBody().strength(d3ChargeStrength))
+          .d3VelocityDecay(d3VelocityDecay)
+          .d3AlphaDecay(d3AlphaDecay)
+          .d3Force('spherical', d3.forceRadial(100, 0, 0, 0).strength(0.35));
 
+        if (cameraPosition) {
+          Graph.cameraPosition(cameraPosition, cameraLookAt, cameraTransitionMs);
+        }
+
+        updateGraphDimensions();
+      } catch (error) {
+        console.error("Error al inicializar ForceGraph3D:", error);
+      }
+    }
+    return () => {
+      if (graphRef.current) {
+        graphRef.current = null;
+        if (containerRef.current) containerRef.current.innerHTML = '';
+      }
+    };
+    // Solo una vez al montar
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // Cargar los datos y actualizar el grafo cuando cambian los datos
+  useEffect(() => {
     if (!graphData && !fullData && !loadingInternalData && !internalError) {
       setLoadingInternalData(true);
       fetch('/nodes.json')
@@ -105,78 +162,14 @@ export default function ForceGraph({
       const links = (fullData.links || []).filter((l: any) => nodeIds.has(l.source) && nodeIds.has(l.target));
       setInternalGraphData({ nodes, links });
     }
+  }, [graphData, fullData, loadingInternalData, internalError, maxNodes]);
 
-    try {
-      const Graph = new (ForceGraph3D as any)(container);
-      graphRef.current = Graph;
-
-      Graph.showNavInfo(showNavInfo)
-        .backgroundColor(backgroundColor)
-        .nodeColor((node: Node) => node.fraud ? '#27c0ff' : '#c2c6c7')
-        .nodeRelSize(nodeRelSize)
-        .linkColor((link: Link) => {
-          const getNode = (n: any) =>
-            typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
-          const source = getNode(link.source);
-          const target = getNode(link.target);
-          return source?.fraud || target?.fraud ? '#27c0ff' : '#d3d3d3';
-        })
-        .linkWidth((link: Link) => {
-          const getNode = (n: any) =>
-            typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
-          const source = getNode(link.source);
-          const target = getNode(link.target);
-          return source?.fraud || target?.fraud ? 3 : 0.5;
-        })
-        .linkDirectionalParticles((link: Link) => {
-          const getNode = (n: any) =>
-            typeof n === 'object' ? n : currentGraphData?.nodes.find(nd => nd.id === n);
-          const source = getNode(link.source);
-          const target = getNode(link.target);
-          return source?.fraud || target?.fraud ? 10 : 0;
-        })
-        .linkDirectionalParticleWidth(() => 2)
-        .linkDirectionalParticleColor(() => '#27c0ff')
-        .d3Force('charge', d3.forceManyBody().strength(d3ChargeStrength))
-        .d3VelocityDecay(d3VelocityDecay)
-        .d3AlphaDecay(d3AlphaDecay)
-        .d3Force('spherical', d3.forceRadial(100, 0, 0, 0).strength(0.35));
-
-      if (cameraPosition) {
-        Graph.cameraPosition(cameraPosition, cameraLookAt, cameraTransitionMs);
-      }
-
-      updateGraphDimensions();
-
-      if (currentGraphData) {
-        Graph.graphData(currentGraphData);
-      }
-    } catch (error) {
-      console.error("Error al inicializar ForceGraph3D:", error);
+  // Actualizar los datos del grafo visualizado cuando cambian los datos
+  useEffect(() => {
+    if (graphRef.current && currentGraphData) {
+      graphRef.current.graphData(currentGraphData);
     }
-
-    return () => {
-      if (graphRef.current) {
-        graphRef.current = null;
-        if (containerRef.current) containerRef.current.innerHTML = '';
-      }
-    };
-  }, [
-    graphData,
-    showNavInfo,
-    backgroundColor,
-    nodeRelSize,
-    d3ChargeStrength,
-    d3VelocityDecay,
-    d3AlphaDecay,
-    cameraPosition,
-    cameraLookAt,
-    cameraTransitionMs,
-    updateGraphDimensions,
-    internalGraphData,
-    loadingInternalData,
-    internalError
-  ]);
+  }, [currentGraphData]);
 
   useEffect(() => {
     if (graphRef.current && currentGraphData) {
@@ -218,23 +211,29 @@ export default function ForceGraph({
       />
       <div className="fixed lg:right-36 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 dark:bg-black/40 opacity-80 bg-[#f9fafb] backdrop-blur-md rounded-xl space-y-3">
         <div className="text-md font-semibold text-black/80 dark:text-white">
-          Cantidad de Transacciones (muestra)
+          Nodos y enlaces visualizados
         </div>
-        {Object.entries({
-          "No fraudulentas": 988970,
-          "Fraudulentas": 11030,
-        }).map(([label, count]) => (
-          <div key={label} className="flex items-center justify-between text-sm">
-            <div className="flex items-center space-x-2">
-              <div
-                className="w-3 h-3 rounded-full"
-                style={{ backgroundColor: label === "Fraudulentas" ? "#27c0ff" : "#c2c6c7" }}
-              />
-              <span className="text-black/80 dark:text-zinc-100">{label}</span>
-            </div>
-            <span className="text-black/60 dark:text-zinc-400 font-medium">{count}</span>
+        <div className="flex flex-col gap-1 text-sm">
+          <div className="flex items-center justify-between">
+            <span className="font-medium">Nodos:</span>
+            <span className="text-black/80 dark:text-zinc-100">{currentGraphData?.nodes.length ?? 0}
+              {fullData ? ` / ${fullData.nodes.length}` : ''}
+            </span>
           </div>
-        ))}
+          <div className="flex items-center justify-between">
+            <span className="font-medium">Enlaces:</span>
+            <span className="text-black/80 dark:text-zinc-100">{currentGraphData?.links.length ?? 0}
+              {fullData ? ` / ${fullData.links.length}` : ''}
+            </span>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="font-medium">Fraudulentas:</span>
+            <span className="text-black/80 dark:text-zinc-100">
+              {currentGraphData?.nodes.filter(n => n.fraud).length ?? 0}
+              {fullData ? ` / ${fullData.nodes.filter(n => n.fraud).length}` : ''}
+            </span>
+          </div>
+        </div>
         {fullData && maxNodes < fullData.nodes.length && (
           <button
             className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors"
