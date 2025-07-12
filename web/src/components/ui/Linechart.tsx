@@ -120,7 +120,7 @@ export function AnimatedLineChart() {
               d={dPath}
               fill="none"
               className="stroke-fuchsia-400"
-              strokeWidth="2"
+              strokeWidth="3"
               vectorEffect="non-scaling-stroke"
             />
           </AnimatedLine>
@@ -152,7 +152,7 @@ export function AnimatedLineChart() {
                   <path
                     d={`M ${xScale(d.date)} ${yScale(d.value)} l 0.0001 0`}
                     vectorEffect="non-scaling-stroke"
-                    strokeWidth="7"
+                    strokeWidth="14"
                     strokeLinecap="round"
                     fill="none"
                     stroke="currentColor"
@@ -161,9 +161,9 @@ export function AnimatedLineChart() {
                   <g className="group/tooltip">
                     <line
                       x1={xScale(d.date)}
-                      y1={0}
+                      y1={yScale(d.value)}
                       x2={xScale(d.date)}
-                      y2={100}
+                      y2={89}
                       stroke="currentColor"
                       strokeWidth={1}
                       className="opacity-0 group-hover/tooltip:opacity-100 text-zinc-300 dark:text-zinc-600 transition-opacity"

@@ -55,7 +55,7 @@ export function AnimatedOutlinedAreaChart() {
     }
 
     return (
-        <div className="relative h-full w-full mt-4">
+        <div className="relative h-full w-full">
             <div
                 className="absolute inset-0
         h-full
@@ -134,9 +134,9 @@ export function AnimatedOutlinedAreaChart() {
                                         {/* Tooltip Line */}
                                         <line
                                             x1={xScale(d.date)}
-                                            y1={0}
+                                            y1={yScale(d.value)}
                                             x2={xScale(d.date)}
-                                            y2={100}
+                                            y2={80}
                                             stroke="currentColor"
                                             strokeWidth={1}
                                             className="opacity-0 group-hover/tooltip:opacity-100 text-zinc-300 dark:text-zinc-700 transition-opacity"
