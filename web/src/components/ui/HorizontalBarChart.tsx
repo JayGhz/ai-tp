@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/TooltipBar";
 import { AnimatedBar } from "@/components/ui/AnimatedBar";
 
-// Componente que recibe los datos como prop
 function HorizontalBarChartContent({ data }: { data: Datum[] }) {
   const sortedData = [...data].sort((a, b) => b.value - a.value);
 
@@ -96,8 +95,8 @@ function HorizontalBarChartContent({ data }: { data: Datum[] }) {
                 className="text-zinc-600 dark:text-zinc-400"
               >
                 <line
-                  y1={0}
-                  y2={100}
+                  y1={20}
+                  y2={95}
                   stroke="currentColor"
                   strokeDasharray="6,5"
                   strokeWidth={0.5}

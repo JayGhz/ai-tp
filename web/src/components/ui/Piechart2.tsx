@@ -24,7 +24,7 @@ function AnimatedDonutChartContent({
     fetch("/eda.json")
       .then((res) => res.json())
       .then((json) => {
-        const pieData = json.pieChart || [];
+        const pieData = json.fraudPieChart || [];
         setData(pieData);
       });
   }, []);
@@ -83,7 +83,7 @@ function AnimatedDonutChartContent({
             centroid[0] -= 10;
           }
 
-          const color = singleColor ? colors[singleColor][i] : colors.purple[i];
+          const color = singleColor ? colors[singleColor][i] : colors.blue[i];
           const datum = {
             key: d.data.name,
             value: d.data.value,
@@ -145,7 +145,7 @@ function AnimatedDonutChartContent({
   );
 }
 
-export function AnimatedDonutChart({
+export function AnimatedDonutChart2({
   singleColor,
 }: {
   singleColor?: "purple" | "blue" | "fuchsia" | "yellow";

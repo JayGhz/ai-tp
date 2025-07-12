@@ -87,6 +87,33 @@
       "value": 105580
     }
   ],
+  "deviceOSBar": [
+    {
+      "key": "linux",
+      "value": 337150,
+      "color": "#FFC182"
+    },
+    {
+      "key": "windows",
+      "value": 304492,
+      "color": "#33C2EA"
+    },
+    {
+      "key": "other",
+      "value": 299948,
+      "color": "#B89DFB"
+    },
+    {
+      "key": "macintosh",
+      "value": 50226,
+      "color": "#87db72"
+    },
+    {
+      "key": "x11",
+      "value": 8184,
+      "color": "#758bcf"
+    }
+  ],
   "areaChart": [
     {
       "date": "2022-01-01",
@@ -205,6 +232,6552 @@
     {
       "name": "AE",
       "value": 0.03
+    }
+  ],
+  "fraudPieChart": [
+    {
+      "name": "No",
+      "value": 98.9
+    },
+    {
+      "name": "S\u00ed",
+      "value": 1.1
+    }
+  ],
+  "correlationHeatmap": [
+    {
+      "row": "fraud_bool",
+      "col": "fraud_bool",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "fraud_bool",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "fraud_bool",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "fraud_bool",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "fraud_bool",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "fraud_bool",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "fraud_bool",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "fraud_bool",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "fraud_bool",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "fraud_bool",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "fraud_bool",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "fraud_bool",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "fraud_bool",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "fraud_bool",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "fraud_bool",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "fraud_bool",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "fraud_bool",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "fraud_bool",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "fraud_bool",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "fraud_bool",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "fraud_bool",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "fraud_bool",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "fraud_bool",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "fraud_bool",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "fraud_bool",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "fraud_bool",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "fraud_bool",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "fraud_bool",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "fraud_bool",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "fraud_bool",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "fraud_bool",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "fraud_bool",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "fraud_bool",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "income",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "income",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "income",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "income",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "income",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "income",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "income",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "income",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "income",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "income",
+      "value": -0.1,
+      "color": "rgba(228, 238, 243, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "income",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "income",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "income",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "income",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "income",
+      "value": 0.17,
+      "color": "rgba(252, 223, 206, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "income",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "income",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "income",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "income",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "income",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "income",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "income",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "income",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "income",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "income",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "income",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "income",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "income",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "income",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "income",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "income",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "income",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "income",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "name_email_similarity",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "name_email_similarity",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "name_email_similarity",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "name_email_similarity",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "name_email_similarity",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "name_email_similarity",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "name_email_similarity",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "name_email_similarity",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "name_email_similarity",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "name_email_similarity",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "name_email_similarity",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "name_email_similarity",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "name_email_similarity",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "name_email_similarity",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "name_email_similarity",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "name_email_similarity",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "name_email_similarity",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "name_email_similarity",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "name_email_similarity",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "name_email_similarity",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "name_email_similarity",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "name_email_similarity",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "name_email_similarity",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "name_email_similarity",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "name_email_similarity",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "name_email_similarity",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "name_email_similarity",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "name_email_similarity",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "name_email_similarity",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "name_email_similarity",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "name_email_similarity",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "name_email_similarity",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "name_email_similarity",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "prev_address_months_count",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "prev_address_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "prev_address_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "prev_address_months_count",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "prev_address_months_count",
+      "value": -0.26,
+      "color": "rgba(189, 218, 234, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "prev_address_months_count",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "prev_address_months_count",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "prev_address_months_count",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "prev_address_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "prev_address_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "prev_address_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "prev_address_months_count",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "prev_address_months_count",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "prev_address_months_count",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "prev_address_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "prev_address_months_count",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "prev_address_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "prev_address_months_count",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "prev_address_months_count",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "prev_address_months_count",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "prev_address_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "prev_address_months_count",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "prev_address_months_count",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "prev_address_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "prev_address_months_count",
+      "value": -0.65,
+      "color": "rgba(57, 134, 188, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "prev_address_months_count",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "prev_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "current_address_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "current_address_months_count",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "current_address_months_count",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "current_address_months_count",
+      "value": -0.26,
+      "color": "rgba(189, 218, 234, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "current_address_months_count",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "current_address_months_count",
+      "value": 0.2,
+      "color": "rgba(253, 219, 199, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "current_address_months_count",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "current_address_months_count",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "current_address_months_count",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "current_address_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "current_address_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "current_address_months_count",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "current_address_months_count",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "current_address_months_count",
+      "value": -0.2,
+      "color": "rgba(209, 229, 240, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "current_address_months_count",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "current_address_months_count",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "current_address_months_count",
+      "value": 0.14,
+      "color": "rgba(251, 227, 214, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "current_address_months_count",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "current_address_months_count",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "current_address_months_count",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "current_address_months_count",
+      "value": 0.16,
+      "color": "rgba(251, 224, 208, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "current_address_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "current_address_months_count",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "current_address_months_count",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "current_address_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "current_address_months_count",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "current_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "current_address_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "current_address_months_count",
+      "value": 0.45,
+      "color": "rgba(236, 147, 116, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "current_address_months_count",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "current_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "current_address_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "current_address_months_count",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "customer_age",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "customer_age",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "customer_age",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "customer_age",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "customer_age",
+      "value": 0.2,
+      "color": "rgba(253, 219, 199, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "customer_age",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "customer_age",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "customer_age",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "customer_age",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "customer_age",
+      "value": -0.52,
+      "color": "rgba(97, 166, 205, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "customer_age",
+      "value": 0.15,
+      "color": "rgba(251, 225, 210, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "customer_age",
+      "value": 0.25,
+      "color": "rgba(250, 204, 180, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "customer_age",
+      "value": -0.17,
+      "color": "rgba(214, 231, 241, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "customer_age",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "customer_age",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "customer_age",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "customer_age",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "customer_age",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "customer_age",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "customer_age",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "customer_age",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "customer_age",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "customer_age",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "customer_age",
+      "value": 0.18,
+      "color": "rgba(252, 221, 202, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "customer_age",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "customer_age",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "customer_age",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "customer_age",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "days_since_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "days_since_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "days_since_request",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "days_since_request",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "days_since_request",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "days_since_request",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "days_since_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "days_since_request",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "days_since_request",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "days_since_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "days_since_request",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "days_since_request",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "days_since_request",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "days_since_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "days_since_request",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "days_since_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "days_since_request",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "days_since_request",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "days_since_request",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "days_since_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "days_since_request",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "days_since_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "days_since_request",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "days_since_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "days_since_request",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "days_since_request",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "days_since_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "days_since_request",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "intended_balcon_amount",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "intended_balcon_amount",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "intended_balcon_amount",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "intended_balcon_amount",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "intended_balcon_amount",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "intended_balcon_amount",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "intended_balcon_amount",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "intended_balcon_amount",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "intended_balcon_amount",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "intended_balcon_amount",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "intended_balcon_amount",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "intended_balcon_amount",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "intended_balcon_amount",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "intended_balcon_amount",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "intended_balcon_amount",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "intended_balcon_amount",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "intended_balcon_amount",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "intended_balcon_amount",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "intended_balcon_amount",
+      "value": 0.16,
+      "color": "rgba(251, 224, 208, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "intended_balcon_amount",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "intended_balcon_amount",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "intended_balcon_amount",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "intended_balcon_amount",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "intended_balcon_amount",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "intended_balcon_amount",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "intended_balcon_amount",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "intended_balcon_amount",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "intended_balcon_amount",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "intended_balcon_amount",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "intended_balcon_amount",
+      "value": -0.25,
+      "color": "rgba(194, 221, 235, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "intended_balcon_amount",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "intended_balcon_amount",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "intended_balcon_amount",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "zip_count_4w",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "zip_count_4w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "zip_count_4w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "zip_count_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "zip_count_4w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "zip_count_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "zip_count_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "zip_count_4w",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "zip_count_4w",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "zip_count_4w",
+      "value": 0.18,
+      "color": "rgba(252, 221, 202, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "zip_count_4w",
+      "value": 0.28,
+      "color": "rgba(249, 197, 171, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "zip_count_4w",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "zip_count_4w",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "zip_count_4w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "zip_count_4w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "zip_count_4w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "zip_count_4w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "zip_count_4w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "zip_count_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "zip_count_4w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "zip_count_4w",
+      "value": -0.27,
+      "color": "rgba(186, 217, 233, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "zip_count_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "zip_count_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "zip_count_4w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "zip_count_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "zip_count_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "zip_count_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "zip_count_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "velocity_6h",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "velocity_6h",
+      "value": -0.1,
+      "color": "rgba(228, 238, 243, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "velocity_6h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "velocity_6h",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "velocity_6h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "velocity_6h",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "velocity_6h",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "velocity_6h",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "velocity_6h",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "velocity_6h",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "velocity_6h",
+      "value": 0.45,
+      "color": "rgba(236, 147, 116, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "velocity_6h",
+      "value": 0.38,
+      "color": "rgba(244, 170, 136, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "velocity_6h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "velocity_6h",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "velocity_6h",
+      "value": -0.14,
+      "color": "rgba(220, 234, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "velocity_6h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "velocity_6h",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "velocity_6h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "velocity_6h",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "velocity_6h",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "velocity_6h",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "velocity_6h",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "velocity_6h",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "velocity_6h",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "velocity_6h",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "velocity_6h",
+      "value": -0.39,
+      "color": "rgba(149, 198, 223, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "velocity_6h",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "velocity_6h",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "velocity_6h",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "velocity_6h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "velocity_6h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "velocity_6h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "velocity_6h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "velocity_24h",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "velocity_24h",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "velocity_24h",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "velocity_24h",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "velocity_24h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "velocity_24h",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "velocity_24h",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "velocity_24h",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "velocity_24h",
+      "value": 0.18,
+      "color": "rgba(252, 221, 202, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "velocity_24h",
+      "value": 0.45,
+      "color": "rgba(236, 147, 116, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "velocity_24h",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "velocity_24h",
+      "value": 0.52,
+      "color": "rgba(225, 123, 97, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "velocity_24h",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "velocity_24h",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "velocity_24h",
+      "value": -0.14,
+      "color": "rgba(220, 234, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "velocity_24h",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "velocity_24h",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "velocity_24h",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "velocity_24h",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "velocity_24h",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "velocity_24h",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "velocity_24h",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "velocity_24h",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "velocity_24h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "velocity_24h",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "velocity_24h",
+      "value": -0.53,
+      "color": "rgba(94, 164, 204, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "velocity_24h",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "velocity_24h",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "velocity_24h",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "velocity_24h",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "velocity_24h",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "velocity_24h",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "velocity_24h",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "velocity_4w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "velocity_4w",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "velocity_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "velocity_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "velocity_4w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "velocity_4w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "velocity_4w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "velocity_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "velocity_4w",
+      "value": 0.28,
+      "color": "rgba(249, 197, 171, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "velocity_4w",
+      "value": 0.38,
+      "color": "rgba(244, 170, 136, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "velocity_4w",
+      "value": 0.52,
+      "color": "rgba(225, 123, 97, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "velocity_4w",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "velocity_4w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "velocity_4w",
+      "value": 0.19,
+      "color": "rgba(252, 220, 200, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "velocity_4w",
+      "value": -0.15,
+      "color": "rgba(217, 233, 241, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "velocity_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "velocity_4w",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "velocity_4w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "velocity_4w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "velocity_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "velocity_4w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "velocity_4w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "velocity_4w",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "velocity_4w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "velocity_4w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "velocity_4w",
+      "value": -0.83,
+      "color": "rgba(28, 92, 158, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "velocity_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "velocity_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "velocity_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "velocity_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "velocity_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "velocity_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "velocity_4w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "bank_branch_count_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "bank_branch_count_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "bank_branch_count_8w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "bank_branch_count_8w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "bank_branch_count_8w",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "bank_branch_count_8w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "bank_branch_count_8w",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "bank_branch_count_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "bank_branch_count_8w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "bank_branch_count_8w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "bank_branch_count_8w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "bank_branch_count_8w",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "bank_branch_count_8w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "bank_branch_count_8w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "bank_branch_count_8w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "bank_branch_count_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "bank_branch_count_8w",
+      "value": 0.14,
+      "color": "rgba(251, 227, 214, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "bank_branch_count_8w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "bank_branch_count_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "bank_branch_count_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "bank_branch_count_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "bank_branch_count_8w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "bank_branch_count_8w",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "bank_branch_count_8w",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "bank_branch_count_8w",
+      "value": -0.23,
+      "color": "rgba(199, 223, 237, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "bank_branch_count_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "bank_branch_count_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "bank_branch_count_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.2,
+      "color": "rgba(209, 229, 240, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.52,
+      "color": "rgba(97, 166, 205, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.19,
+      "color": "rgba(252, 220, 200, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.21,
+      "color": "rgba(206, 227, 239, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.2,
+      "color": "rgba(209, 229, 240, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.16,
+      "color": "rgba(216, 232, 241, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "date_of_birth_distinct_emails_4w",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "credit_risk_score",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "credit_risk_score",
+      "value": 0.17,
+      "color": "rgba(252, 223, 206, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "credit_risk_score",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "credit_risk_score",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "credit_risk_score",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "credit_risk_score",
+      "value": 0.15,
+      "color": "rgba(251, 225, 210, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "credit_risk_score",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "credit_risk_score",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "credit_risk_score",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "credit_risk_score",
+      "value": -0.14,
+      "color": "rgba(220, 234, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "credit_risk_score",
+      "value": -0.14,
+      "color": "rgba(220, 234, 242, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "credit_risk_score",
+      "value": -0.15,
+      "color": "rgba(217, 233, 241, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "credit_risk_score",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "credit_risk_score",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "credit_risk_score",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "credit_risk_score",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "credit_risk_score",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "credit_risk_score",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "credit_risk_score",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "credit_risk_score",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "credit_risk_score",
+      "value": 0.63,
+      "color": "rgba(208, 84, 71, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "credit_risk_score",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "credit_risk_score",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "credit_risk_score",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "credit_risk_score",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "credit_risk_score",
+      "value": 0.15,
+      "color": "rgba(251, 225, 210, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "credit_risk_score",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "credit_risk_score",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "credit_risk_score",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "credit_risk_score",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "credit_risk_score",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "credit_risk_score",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "credit_risk_score",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "email_is_free",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "email_is_free",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "email_is_free",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "email_is_free",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "email_is_free",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "email_is_free",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "email_is_free",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "email_is_free",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "email_is_free",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "email_is_free",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "email_is_free",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "email_is_free",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "email_is_free",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "email_is_free",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "email_is_free",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "email_is_free",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "email_is_free",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "email_is_free",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "email_is_free",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "email_is_free",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "email_is_free",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "email_is_free",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "email_is_free",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "email_is_free",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "email_is_free",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "email_is_free",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "email_is_free",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "email_is_free",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "email_is_free",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "email_is_free",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "email_is_free",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "email_is_free",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "email_is_free",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "phone_home_valid",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "phone_home_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "phone_home_valid",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "phone_home_valid",
+      "value": 0.14,
+      "color": "rgba(251, 227, 214, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "phone_home_valid",
+      "value": 0.25,
+      "color": "rgba(250, 204, 180, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "phone_home_valid",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "phone_home_valid",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "phone_home_valid",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "phone_home_valid",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "phone_home_valid",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "phone_home_valid",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "phone_home_valid",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "phone_home_valid",
+      "value": -0.21,
+      "color": "rgba(206, 227, 239, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "phone_home_valid",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "phone_home_valid",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "phone_home_valid",
+      "value": -0.28,
+      "color": "rgba(184, 216, 232, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "phone_home_valid",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "phone_home_valid",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "phone_home_valid",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "phone_home_valid",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "phone_home_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "phone_home_valid",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "phone_home_valid",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "phone_home_valid",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "phone_home_valid",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "phone_home_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "phone_home_valid",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "phone_mobile_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "phone_mobile_valid",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "phone_mobile_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "phone_mobile_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "phone_mobile_valid",
+      "value": -0.11,
+      "color": "rgba(225, 236, 243, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "phone_mobile_valid",
+      "value": -0.17,
+      "color": "rgba(214, 231, 241, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "phone_mobile_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "phone_mobile_valid",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "phone_mobile_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "phone_mobile_valid",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "phone_mobile_valid",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "phone_mobile_valid",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "phone_mobile_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "phone_mobile_valid",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "phone_mobile_valid",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "phone_mobile_valid",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "phone_mobile_valid",
+      "value": -0.28,
+      "color": "rgba(184, 216, 232, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "phone_mobile_valid",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "phone_mobile_valid",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "phone_mobile_valid",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "phone_mobile_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "phone_mobile_valid",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "phone_mobile_valid",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "phone_mobile_valid",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "phone_mobile_valid",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "phone_mobile_valid",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "phone_mobile_valid",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "phone_mobile_valid",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "phone_mobile_valid",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "phone_mobile_valid",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "phone_mobile_valid",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "phone_mobile_valid",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "phone_mobile_valid",
+      "value": -0.15,
+      "color": "rgba(217, 233, 241, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "bank_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "bank_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "bank_months_count",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "bank_months_count",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "bank_months_count",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "bank_months_count",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "bank_months_count",
+      "value": 0.16,
+      "color": "rgba(251, 224, 208, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "bank_months_count",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "bank_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "bank_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "bank_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "bank_months_count",
+      "value": 0.14,
+      "color": "rgba(251, 227, 214, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "bank_months_count",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "bank_months_count",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "bank_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "bank_months_count",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "bank_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "bank_months_count",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "bank_months_count",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "bank_months_count",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "bank_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "bank_months_count",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "bank_months_count",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "bank_months_count",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "bank_months_count",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "bank_months_count",
+      "value": -0.55,
+      "color": "rgba(85, 158, 201, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "bank_months_count",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "bank_months_count",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "has_other_cards",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "has_other_cards",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "has_other_cards",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "has_other_cards",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "has_other_cards",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "has_other_cards",
+      "value": 0.1,
+      "color": "rgba(249, 233, 223, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "has_other_cards",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "has_other_cards",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "has_other_cards",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "has_other_cards",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "has_other_cards",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "has_other_cards",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "has_other_cards",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "has_other_cards",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "has_other_cards",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "has_other_cards",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "has_other_cards",
+      "value": 0.11,
+      "color": "rgba(250, 231, 219, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "has_other_cards",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "has_other_cards",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "has_other_cards",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "has_other_cards",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "has_other_cards",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "has_other_cards",
+      "value": -0.1,
+      "color": "rgba(228, 238, 243, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "has_other_cards",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "has_other_cards",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "has_other_cards",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "has_other_cards",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "has_other_cards",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "has_other_cards",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "has_other_cards",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "has_other_cards",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "has_other_cards",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "has_other_cards",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "proposed_credit_limit",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "proposed_credit_limit",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "proposed_credit_limit",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "proposed_credit_limit",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "proposed_credit_limit",
+      "value": 0.16,
+      "color": "rgba(251, 224, 208, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "proposed_credit_limit",
+      "value": 0.13,
+      "color": "rgba(250, 228, 215, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "proposed_credit_limit",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "proposed_credit_limit",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "proposed_credit_limit",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "proposed_credit_limit",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "proposed_credit_limit",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "proposed_credit_limit",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "proposed_credit_limit",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "proposed_credit_limit",
+      "value": 0.63,
+      "color": "rgba(208, 84, 71, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "proposed_credit_limit",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "proposed_credit_limit",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "proposed_credit_limit",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "proposed_credit_limit",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "proposed_credit_limit",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "proposed_credit_limit",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "proposed_credit_limit",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "proposed_credit_limit",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "proposed_credit_limit",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "proposed_credit_limit",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "proposed_credit_limit",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "proposed_credit_limit",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "proposed_credit_limit",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "proposed_credit_limit",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "foreign_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "foreign_request",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "foreign_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "foreign_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "foreign_request",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "foreign_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "foreign_request",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "foreign_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "foreign_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "foreign_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "foreign_request",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "foreign_request",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "foreign_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "foreign_request",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "foreign_request",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "foreign_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "foreign_request",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "foreign_request",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "foreign_request",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "foreign_request",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "foreign_request",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "session_length_in_minutes",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "session_length_in_minutes",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "session_length_in_minutes",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "session_length_in_minutes",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "session_length_in_minutes",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "session_length_in_minutes",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "session_length_in_minutes",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "session_length_in_minutes",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "session_length_in_minutes",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "session_length_in_minutes",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "session_length_in_minutes",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "session_length_in_minutes",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "session_length_in_minutes",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "session_length_in_minutes",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "session_length_in_minutes",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "session_length_in_minutes",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "session_length_in_minutes",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "session_length_in_minutes",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "session_length_in_minutes",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "session_length_in_minutes",
+      "value": -0.1,
+      "color": "rgba(228, 238, 243, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "session_length_in_minutes",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "session_length_in_minutes",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "session_length_in_minutes",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "session_length_in_minutes",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "session_length_in_minutes",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "session_length_in_minutes",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "session_length_in_minutes",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "session_length_in_minutes",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "session_length_in_minutes",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "session_length_in_minutes",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "session_length_in_minutes",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "session_length_in_minutes",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "session_length_in_minutes",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "keep_alive_session",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "keep_alive_session",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "keep_alive_session",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "keep_alive_session",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "keep_alive_session",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "keep_alive_session",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "keep_alive_session",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "keep_alive_session",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "keep_alive_session",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "keep_alive_session",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "keep_alive_session",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "keep_alive_session",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "keep_alive_session",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "keep_alive_session",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "keep_alive_session",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "keep_alive_session",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "keep_alive_session",
+      "value": -0.09,
+      "color": "rgba(229, 238, 243, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "keep_alive_session",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "keep_alive_session",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "keep_alive_session",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "keep_alive_session",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "keep_alive_session",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "keep_alive_session",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "keep_alive_session",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "keep_alive_session",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "keep_alive_session",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "keep_alive_session",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "keep_alive_session",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "device_distinct_emails_8w",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "device_distinct_emails_8w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "device_distinct_emails_8w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "device_distinct_emails_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "device_distinct_emails_8w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "device_distinct_emails_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "device_distinct_emails_8w",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "device_distinct_emails_8w",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "device_distinct_emails_8w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "device_distinct_emails_8w",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "device_distinct_emails_8w",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "device_distinct_emails_8w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "device_distinct_emails_8w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "device_distinct_emails_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "device_distinct_emails_8w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "device_distinct_emails_8w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "device_distinct_emails_8w",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "device_distinct_emails_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "device_distinct_emails_8w",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "device_distinct_emails_8w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "device_distinct_emails_8w",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "device_distinct_emails_8w",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "device_distinct_emails_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "device_distinct_emails_8w",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "device_distinct_emails_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "device_distinct_emails_8w",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "device_distinct_emails_8w",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "month",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "month",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "month",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "month",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "month",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "month",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "month",
+      "value": -0.27,
+      "color": "rgba(186, 217, 233, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "month",
+      "value": -0.39,
+      "color": "rgba(149, 198, 223, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "month",
+      "value": -0.53,
+      "color": "rgba(94, 164, 204, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "month",
+      "value": -0.83,
+      "color": "rgba(28, 92, 158, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "month",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "month",
+      "value": -0.2,
+      "color": "rgba(209, 229, 240, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "month",
+      "value": 0.15,
+      "color": "rgba(251, 225, 210, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "month",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "month",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "month",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "month",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "month",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "month",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "month",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "month",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "month",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "month",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "month",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "month",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "month",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "month",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "month",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "x1",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "x1",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "x1",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "x1",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "x1",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "x1",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "x1",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "x1",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "x1",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "x2",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "x2",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "x2",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "x2",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "x2",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "x2",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "x2",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "x2",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.65,
+      "color": "rgba(57, 134, 188, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.45,
+      "color": "rgba(236, 147, 116, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.18,
+      "color": "rgba(252, 221, 202, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.16,
+      "color": "rgba(216, 232, 241, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.12,
+      "color": "rgba(250, 229, 217, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "prev_address_months_count_was_missing",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "prev_address_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "prev_address_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "bank_months_count_was_missing",
+      "value": 0.03,
+      "color": "rgba(247, 243, 240, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "bank_months_count_was_missing",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "bank_months_count_was_missing",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "bank_months_count_was_missing",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "bank_months_count_was_missing",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "bank_months_count_was_missing",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "bank_months_count_was_missing",
+      "value": 0.09,
+      "color": "rgba(249, 234, 225, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "bank_months_count_was_missing",
+      "value": -0.25,
+      "color": "rgba(194, 221, 235, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "bank_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "bank_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "bank_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "bank_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "bank_months_count_was_missing",
+      "value": -0.23,
+      "color": "rgba(199, 223, 237, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "bank_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "bank_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "bank_months_count_was_missing",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "bank_months_count_was_missing",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "bank_months_count_was_missing",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "bank_months_count_was_missing",
+      "value": -0.55,
+      "color": "rgba(85, 158, 201, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "bank_months_count_was_missing",
+      "value": -0.06,
+      "color": "rgba(235, 241, 244, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "bank_months_count_was_missing",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "bank_months_count_was_missing",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "bank_months_count_was_missing",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "bank_months_count_was_missing",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "bank_months_count_was_missing",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "bank_months_count_was_missing",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "bank_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "bank_months_count_was_missing",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "bank_months_count_was_missing",
+      "value": -0.08,
+      "color": "rgba(231, 239, 244, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "bank_months_count_was_missing",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "bank_months_count_was_missing",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "bank_months_count_was_missing",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "bank_months_count_was_missing",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "simulated_day",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "simulated_day",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "simulated_day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "simulated_day",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "simulated_day",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "simulated_day",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "simulated_day",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "simulated_day",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "simulated_day",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "simulated_day",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "simulated_day",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "simulated_day",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "simulated_day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "simulated_day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "simulated_day",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "simulated_day",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "simulated_day",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "simulated_day",
+      "value": 0.94,
+      "color": "rgba(123, 6, 34, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "group_in_month",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "group_in_month",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "group_in_month",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "group_in_month",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "group_in_month",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "group_in_month",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "group_in_month",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "group_in_month",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "group_in_month",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "group_in_month",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "group_in_month",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "group_in_month",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "group_in_month",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "group_in_month",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "group_in_month",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "group_in_month",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "group_in_month",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "group_in_month",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "fraud_bool",
+      "col": "day",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "income",
+      "col": "day",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "name_email_similarity",
+      "col": "day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count",
+      "col": "day",
+      "value": -0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "current_address_months_count",
+      "col": "day",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "customer_age",
+      "col": "day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "days_since_request",
+      "col": "day",
+      "value": -0.12,
+      "color": "rgba(223, 236, 242, 0.85)"
+    },
+    {
+      "row": "intended_balcon_amount",
+      "col": "day",
+      "value": -0.07,
+      "color": "rgba(234, 241, 244, 0.85)"
+    },
+    {
+      "row": "zip_count_4w",
+      "col": "day",
+      "value": 0.01,
+      "color": "rgba(247, 245, 244, 0.85)"
+    },
+    {
+      "row": "velocity_6h",
+      "col": "day",
+      "value": 0.02,
+      "color": "rgba(247, 244, 242, 0.85)"
+    },
+    {
+      "row": "velocity_24h",
+      "col": "day",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "velocity_4w",
+      "col": "day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "bank_branch_count_8w",
+      "col": "day",
+      "value": -0.01,
+      "color": "rgba(244, 245, 246, 0.85)"
+    },
+    {
+      "row": "date_of_birth_distinct_emails_4w",
+      "col": "day",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "credit_risk_score",
+      "col": "day",
+      "value": 0.06,
+      "color": "rgba(248, 238, 232, 0.85)"
+    },
+    {
+      "row": "email_is_free",
+      "col": "day",
+      "value": 0.05,
+      "color": "rgba(248, 239, 234, 0.85)"
+    },
+    {
+      "row": "phone_home_valid",
+      "col": "day",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "phone_mobile_valid",
+      "col": "day",
+      "value": -0.15,
+      "color": "rgba(217, 233, 241, 0.85)"
+    },
+    {
+      "row": "bank_months_count",
+      "col": "day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "has_other_cards",
+      "col": "day",
+      "value": 0.04,
+      "color": "rgba(248, 240, 236, 0.85)"
+    },
+    {
+      "row": "proposed_credit_limit",
+      "col": "day",
+      "value": 0.07,
+      "color": "rgba(249, 237, 231, 0.85)"
+    },
+    {
+      "row": "foreign_request",
+      "col": "day",
+      "value": -0.04,
+      "color": "rgba(238, 243, 245, 0.85)"
+    },
+    {
+      "row": "session_length_in_minutes",
+      "col": "day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "keep_alive_session",
+      "col": "day",
+      "value": -0.03,
+      "color": "rgba(241, 244, 246, 0.85)"
+    },
+    {
+      "row": "device_distinct_emails_8w",
+      "col": "day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "month",
+      "col": "day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "x1",
+      "col": "day",
+      "value": -0.05,
+      "color": "rgba(237, 242, 245, 0.85)"
+    },
+    {
+      "row": "x2",
+      "col": "day",
+      "value": 0.0,
+      "color": "rgba(247, 246, 246, 0.85)"
+    },
+    {
+      "row": "prev_address_months_count_was_missing",
+      "col": "day",
+      "value": -0.02,
+      "color": "rgba(243, 245, 246, 0.85)"
+    },
+    {
+      "row": "bank_months_count_was_missing",
+      "col": "day",
+      "value": 0.08,
+      "color": "rgba(249, 235, 227, 0.85)"
+    },
+    {
+      "row": "simulated_day",
+      "col": "day",
+      "value": 0.94,
+      "color": "rgba(123, 6, 34, 0.85)"
+    },
+    {
+      "row": "group_in_month",
+      "col": "day",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
+    },
+    {
+      "row": "day",
+      "col": "day",
+      "value": 1.0,
+      "color": "rgba(103, 0, 31, 0.85)"
     }
   ]
 }

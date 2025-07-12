@@ -121,11 +121,11 @@ function BarChartVerticalContent() {
           return (
             <div
               key={i}
-              className="absolute mt-2 overflow-visible dark:text-zinc-400"
+              className="absolute mt-4 overflow-visible dark:text-zinc-400"
               style={{
                 left: `${xPosition}%`,
                 top: "100%",
-                transform: "rotate(25deg) translateX(1px) translateY(6px)",
+                transform: "translateX(-15px)",
               }}
             >
               <div className="absolute text-xs -translate-y-1/2 whitespace-nowrap">
