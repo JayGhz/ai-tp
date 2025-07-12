@@ -3,3 +3,6 @@ web/package-lock.json
 *.npy
 
 venv311
+
+core/data/Variant\ V.csv
+core/data/preprocessed_data.csv
