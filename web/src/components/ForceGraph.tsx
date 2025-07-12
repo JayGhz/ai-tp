@@ -60,6 +60,8 @@ export default function ForceGraph({
   const [internalGraphData, setInternalGraphData] = useState<GraphData | undefined>(undefined);
   const [loadingInternalData, setLoadingInternalData] = useState(false);
   const [internalError, setInternalError] = useState<string | null>(null);
+  const [maxNodes, setMaxNodes] = useState(200);
+  const [fullData, setFullData] = useState<GraphData | null>(null);
 
   const currentGraphData = graphData || internalGraphData;
 
@@ -75,7 +77,7 @@ export default function ForceGraph({
     if (!containerRef.current) return;
     const container = containerRef.current;
 
-    if (!graphData && !internalGraphData && !loadingInternalData && !internalError) {
+    if (!graphData && !fullData && !loadingInternalData && !internalError) {
       setLoadingInternalData(true);
       fetch('/nodes.json')
         .then(res => {
@@ -83,7 +85,12 @@ export default function ForceGraph({
           return res.json();
         })
         .then((data: GraphData) => {
-          setInternalGraphData(data);
+          setFullData(data);
+          // Limitar a los primeros maxNodes nodos y enlaces relacionados
+          const nodes = data.nodes.slice(0, maxNodes);
+          const nodeIds = new Set(nodes.map((n: any) => n.id));
+          const links = (data.links || []).filter((l: any) => nodeIds.has(l.source) && nodeIds.has(l.target));
+          setInternalGraphData({ nodes, links });
           setLoadingInternalData(false);
         })
         .catch(err => {
@@ -91,6 +98,12 @@ export default function ForceGraph({
           console.error("Error al cargar graphData:", err);
           setLoadingInternalData(false);
         });
+    } else if (!graphData && fullData) {
+      // Si ya tenemos los datos completos, actualizar la muestra si cambia maxNodes
+      const nodes = fullData.nodes.slice(0, maxNodes);
+      const nodeIds = new Set(nodes.map((n: any) => n.id));
+      const links = (fullData.links || []).filter((l: any) => nodeIds.has(l.source) && nodeIds.has(l.target));
+      setInternalGraphData({ nodes, links });
     }
 
     try {
@@ -178,6 +191,17 @@ export default function ForceGraph({
 
   return (
     <>
+      {loadingInternalData && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+          <div className="p-6 bg-white dark:bg-zinc-900 rounded-lg shadow-lg flex flex-col items-center">
+            <svg className="animate-spin h-8 w-8 text-blue-500 mb-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+            </svg>
+            <span className="text-black dark:text-white">Cargando grafo...</span>
+          </div>
+        </div>
+      )}
       <div
         ref={containerRef}
         style={{
@@ -194,7 +218,7 @@ export default function ForceGraph({
       />
       <div className="fixed lg:right-36 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 dark:bg-black/40 opacity-80 bg-[#f9fafb] backdrop-blur-md rounded-xl space-y-3">
         <div className="text-md font-semibold text-black/80 dark:text-white">
-          Cantidad de Transacciones
+          Cantidad de Transacciones (muestra)
         </div>
         {Object.entries({
           "No fraudulentas": 988970,
@@ -211,6 +235,14 @@ export default function ForceGraph({
             <span className="text-black/60 dark:text-zinc-400 font-medium">{count}</span>
           </div>
         ))}
+        {fullData && maxNodes < fullData.nodes.length && (
+          <button
+            className="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded transition-colors"
+            onClick={() => setMaxNodes(m => Math.min(m + 200, fullData.nodes.length))}
+          >
+            Cargar más nodos
+          </button>
+        )}
       </div>
     </>
   );
