@@ -7,6 +7,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 from imblearn.over_sampling import SMOTE # Adding this for smote [not compatible with sklearn version] (changing to compatible version in requirements.txt)
+from imblearn.combine import SMOTEENN #? Added
+
 from sklearn.metrics import precision_recall_curve
 
 import torch
@@ -31,6 +33,13 @@ df["current_address_months_count"].replace(-1, df["current_address_months_count"
 df["session_length_in_minutes"].replace(-1, df["session_length_in_minutes"].median(), inplace=True)
 df["credit_risk_score"].replace(-1, df["credit_risk_score"].median(), inplace=True)
 df["device_distinct_emails_8w"].replace(-1, df["device_distinct_emails_8w"].median(), inplace=True)
+
+#? Added
+df["bank_vs_address"] = df["bank_months_count"] / (df["prev_address_months_count"] + 1)
+df["emails_per_session"] = df["device_distinct_emails_8w"] / (df["session_length_in_minutes"] + 1)
+df["credit_per_session"] = df["credit_risk_score"] / (df["session_length_in_minutes"] + 1)
+
+
 df.to_csv("data/preprocessed_data.csv", index=False)
 #! --- [END] PREPROCESSING ---
 
@@ -68,24 +77,43 @@ np.save("./data/y_test.npy", y_test.to_numpy())
 # Implementing the files of smote
 # [1][auto] -> Increase the number of frauds to an acceptable level [now in ≈1%]
 # [2][0.3] -> Trying to increase the numbers of the training model
-smote = SMOTE(random_state=42, sampling_strategy=0.3)
-X_train_smote, y_train_smote = smote.fit_resample(X_train_scaled, y_train)
+# smote = SMOTE(random_state=42, sampling_strategy=0.3)
+# X_train_smote, y_train_smote = smote.fit_resample(X_train_scaled, y_train)
 
 print(f"Distribución original: {np.bincount(y_train)}")
-print(f"Distribución después de SMOTE: {np.bincount(y_train_smote)}")
 
+# SMOTE
+print("Aplicando SMOTE...")
+smote = SMOTE(random_state=42, sampling_strategy=0.3, n_jobs=-1)
+X_train_smote, y_train_smote = smote.fit_resample(X_train_scaled, y_train)
 np.save('./data/X_train_smote.npy', X_train_smote)
 np.save('./data/y_train_smote.npy', y_train_smote)
+print("SMOTE:", np.bincount(y_train_smote))
+
+# SMOTEENN
+print("Aplicando SMOTEENN...")
+smoteenn = SMOTEENN(random_state=42, sampling_strategy=0.3, n_jobs=-1)
+X_train_smoteenn, y_train_smoteenn = smoteenn.fit_resample(X_train_scaled, y_train)
+np.save('./data/X_train_smoteenn.npy', X_train_smoteenn)
+np.save('./data/y_train_smoteenn.npy', y_train_smoteenn)
+print("SMOTEENN:", np.bincount(y_train_smoteenn))
+
+
 #! --- [END] SPLITTING ---
 
 
 #! --- [START] MLP ---
-# X_train = np.load("./data/X_train_scaled.npy")
-X_train = np.load('./data/X_train_smote.npy')
-X_test = np.load("./data/X_test_scaled.npy")
-# y_train = np.load("./data/y_train.npy")
-y_train = np.load('./data/y_train_smote.npy')
-y_test = np.load("./data/y_test.npy")
+# Cambia entre 'smote' y 'smoteenn'
+training_variant = 'smote'  # 'smoteenn' para el otro
+
+if training_variant == 'smote':
+    X_train = np.load('./data/X_train_smote.npy')
+    y_train = np.load('./data/y_train_smote.npy')
+    model_save_path = './models/mlp_smote.pth'
+else:
+    X_train = np.load('./data/X_train_smoteenn.npy')
+    y_train = np.load('./data/y_train_smoteenn.npy')
+    model_save_path = './models/mlp_smoteenn.pth'
 
 # Tensores
 X_train_tensor = torch.tensor(X_train, dtype=torch.float32).to('cuda') #? using c|uda
@@ -115,7 +143,7 @@ class FocalLoss(nn.Module):
 class MLP(nn.Module):
   def __init__(self, input_dim):
     super(MLP, self).__init__()
-    self.net = nn.Sequential(
+    self.net = nn.Sequential( #? Added
       nn.Linear(input_dim, 256),
       nn.ReLU(),
       nn.BatchNorm1d(256),
@@ -137,21 +165,32 @@ class MLP(nn.Module):
     return self.net(x).squeeze(1)
 def train_model(model, loss_fn, optimizer, n_epochs=20, patience=3): #? Changing in test
   model.train()
+  best_loss = float('inf') #? Added
+  wait = 0
+  history = []
 
   for epoch in range(n_epochs):
     total_loss = 0
     for X_batch, y_batch in train_loader:
-      X_batch = X_batch.to('cuda') #? using c|uda
-      y_batch = y_batch.to('cuda') #? using c|uda
       optimizer.zero_grad()
       outputs = model(X_batch)
       loss = loss_fn(outputs, y_batch)
       loss.backward()
       optimizer.step()
       total_loss += loss.item()
+
     avg_loss = total_loss / len(train_loader)
     history.append(avg_loss)
     print(f"Epoch {epoch+1}/{n_epochs} - Loss: {avg_loss:.4f}")
+
+    if avg_loss < best_loss - 1e-4: #? Added
+      best_loss = avg_loss 
+      wait = 0
+    else:
+      wait += 1
+      if wait >= patience:
+        print("Early stopping")
+        break
   return history
 input_dim = X_train.shape[1]
 model = MLP(input_dim).to('cuda') #? using c|uda
@@ -174,7 +213,7 @@ with torch.no_grad():
 print(classification_report(y_test, y_pred_labels, digits=4))
 print("AUC:", roc_auc_score(y_test, y_pred))
 os.makedirs("./models", exist_ok=True)
-torch.save(model.state_dict(), "./models/mlp_model.pth")
+torch.save(model.state_dict(), model_save_path)
 #! --- [END] MLP ---
 
 
@@ -194,12 +233,24 @@ from sklearn.metrics import (
 import shap
 import os
 
+variant = 'smote'  # o 'smoteenn'
+
+if variant == 'smote':
+    model_path = './models/mlp_smote.pth'
+    model_label = 'SMOTE'
+else:
+    model_path = './models/mlp_smoteenn.pth'
+    model_label = 'SMOTEENN'
+
+
 X_test = np.load("./data/X_test_scaled.npy")
 y_test = np.load("./data/y_test.npy")
 
 input_dim = X_test.shape[1]
 model = MLP(input_dim)
-model.load_state_dict(torch.load("./models/mlp_model.pth"))
+
+model.load_state_dict(torch.load(model_path))
+
 model.eval()
 
 with torch.no_grad():

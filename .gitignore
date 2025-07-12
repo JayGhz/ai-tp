@@ -1,2 +1,7 @@
 env/
+web/package-lock.json
 *.npy
+
+venv311
+core/data/*.csv
+core/models/*
