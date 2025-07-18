@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import ForceGraph from '@/components/ForceGraph';
 import ModeloRNA from '@/components/ModeloRNA';
 import Prediccion from '@/components/Prediccion';
 import EDA from '@/components/EDA';
 import { Dataset } from '@/components/Dataset';
+import ForceGraph from '@/components/ForceGraph';
 
 declare global {
     interface Window {

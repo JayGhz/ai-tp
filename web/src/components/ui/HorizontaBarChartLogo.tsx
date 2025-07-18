@@ -13,11 +13,11 @@ import {
 import { AnimatedBar } from "@/components/ui/AnimatedBar";
 
 const LOGO_PATHS: Record<string, string> = {
-    linux: "/logos/linux.png",
-    windows: "/logos/windows.png",
-    macintosh: "/logos/macos.png",
-    x11: "/logos/x11.png",
-    other: "/logos/others.png",
+    Linux: "/logos/linux.svg",
+    Windows: "/logos/windows.svg",
+    macOs: "/logos/macos.svg",
+    x11: "/logos/x11.svg",
+    Others: "/logos/others.svg",
 };
 
 function HorizontalBarChartLogosContent({ data }: { data: Datum[] }) {
@@ -51,7 +51,7 @@ function HorizontalBarChartLogosContent({ data }: { data: Datum[] }) {
                 {sortedData.map((entry) => (
                     <div
                         key={entry.key}
-                        className="absolute size-10 rounded-full overflow-hidden flex items-center justify-center -translate-y-1/2"
+                        className="absolute size-10 rounded-lg overflow-hidden flex items-center justify-center -translate-y-1/2"
                         style={{
                             top: `${yScale(entry.key)! + yScale.bandwidth() / 2}%`,
                             left: `0`,
@@ -61,7 +61,7 @@ function HorizontalBarChartLogosContent({ data }: { data: Datum[] }) {
                         <img
                             src={LOGO_PATHS[entry.key] ?? "/logos/others.png"}
                             alt={entry.key}
-                            className="w-5 h-5 object-contain"
+                            className="w-6 h-6 object-contain"
                         />
                     </div>
                 ))}
@@ -135,27 +135,34 @@ function HorizontalBarChartLogosContent({ data }: { data: Datum[] }) {
             {/* Eje X */}
             <svg
                 className="absolute inset-0 
-                    w-[calc(100%-var(--marginLeft)-var(--marginRight))] 
-                    translate-x-[var(--marginLeft)] 
-                    h-[calc(100%-var(--marginBottom))] 
-                    translate-y-2 
-                    overflow-visible"
+        w-[calc(100%-var(--marginLeft)-var(--marginRight))] 
+        translate-x-[var(--marginLeft)] 
+        h-[calc(100%-var(--marginBottom))] 
+        translate-y-2 
+        overflow-visible"
             >
                 <g className="overflow-visible">
-                    {xScale.ticks(4).map((value, idx) => (
-                        <text
-                            key={idx}
-                            x={`${xScale(value)}%`}
-                            y="100%"
-                            textAnchor="middle"
-                            fill="currentColor"
-                            className="text-xs mt-10 tabular-nums dark:text-zinc-400"
-                        >
-                            {value}
-                        </text>
-                    ))}
+                    {xScale.ticks(4).map((value, idx) => {
+                        const formattedValue = value >= 1000
+                            ? `${(value / 1000)}K`
+                            : value.toString();
+
+                        return (
+                            <text
+                                key={idx}
+                                x={`${xScale(value)}%`}
+                                y="100%"
+                                textAnchor="middle"
+                                fill="currentColor"
+                                className="text-xs mt-10 tabular-nums dark:text-zinc-400"
+                            >
+                                {formattedValue}
+                            </text>
+                        );
+                    })}
                 </g>
             </svg>
+
 
             {/* Tooltip */}
             {tooltip && (
@@ -168,8 +175,9 @@ function HorizontalBarChartLogosContent({ data }: { data: Datum[] }) {
                         <div>
                             <p className="text-sm font-semibold">{tooltip.datum.key}</p>
                             <p className="text-xs text-gray-500">
-                                {(tooltip.datum.value)}
+                                {tooltip.datum.value.toLocaleString()}
                             </p>
+
                         </div>
                     </div>
                 </TooltipBarContent>

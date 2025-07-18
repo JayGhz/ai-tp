@@ -39,7 +39,7 @@ const navItems = [
     {
       navItems.map(({ url, title, label }) => (
         <a
-          class="relative block px-2 py-2 transition hover hover:text-black hover:font-bold dark:hover:text-white dark:hover:font-bold nav-item"
+          class="relative block px-2 py-2 transition hover hover:font-bold hover:text-[#27c0ff] nav-item"
           href="#"
           data-section={url.replace("#", "")}
           aria-label={label}
@@ -65,6 +65,7 @@ const navItems = [
     event.currentTarget.classList.add("text-[#27c0ff]", "font-bold");
 
     const section = event.currentTarget.getAttribute("data-section");
+    localStorage.setItem('activeSection', section);
     
     const customEvent = new CustomEvent("sectionChange", {
       detail: { section: section || "graph" },
@@ -76,32 +77,27 @@ const navItems = [
 
   function initNavigation() {
     const navItems = document.querySelectorAll(".nav-item");
-    let activeItem = null;
+    const activeSection = localStorage.getItem('activeSection') || 'graph';
 
     navItems.forEach(item => {
       item.removeEventListener("click", handleNavClick);
       item.addEventListener("click", handleNavClick);
+      
+      const itemSection = item.getAttribute("data-section");
+      if (itemSection === activeSection) {
+        item.classList.add("text-[#27c0ff]", "font-bold");
+      }
     });
 
-    if (navItems.length > 0 && !activeItem) {
-      navItems[0].classList.add("text-[#27c0ff]", "font-bold");
-      activeItem = navItems[0];
-      
-      const initialSection = navItems[0].getAttribute("data-section");
-      
-      setTimeout(() => {
-        const initialEvent = new CustomEvent("sectionChange", {
-          detail: { section: initialSection || "graph" },
-          bubbles: true
-        });
-        
-        document.dispatchEvent(initialEvent);
-      }, 100);
-    }
+    const customEvent = new CustomEvent("sectionChange", {
+      detail: { section: activeSection },
+      bubbles: true
+    });
+    
+    document.dispatchEvent(customEvent);
   }
 
   document.addEventListener("DOMContentLoaded", initNavigation);
-  
   document.addEventListener("astro:page-load", initNavigation);
 </script>
 
@@ -110,7 +106,7 @@ const navItems = [
     animation: nav-shadown 1s linear both;
     animation-timeline: scroll();
     animation-range: 0 100px;
-    @apply dark:bg-black/30 bg-[#f9fafb];
+    @apply dark:bg-black/20 bg-[#f9fafb];
   }
 
   @keyframes nav-shadown {

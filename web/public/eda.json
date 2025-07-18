@@ -21,7 +21,7 @@
       "color": "#FFC182"
     },
     {
-      "key": "Others",
+      "key": "OT",
       "value": 2.84,
       "color": "#87db72"
     }
@@ -89,29 +89,29 @@
   ],
   "deviceOSBar": [
     {
-      "key": "linux",
+      "key": "Linux",
       "value": 337150,
       "color": "#FFC182"
     },
     {
-      "key": "windows",
+      "key": "Windows",
       "value": 304492,
       "color": "#33C2EA"
     },
     {
-      "key": "other",
+      "key": "Others",
       "value": 299948,
-      "color": "#B89DFB"
+      "color": "#87db72"
     },
     {
-      "key": "macintosh",
+      "key": "macOs",
       "value": 50226,
-      "color": "#87db72"
+      "color": "#758bcf"
     },
     {
       "key": "x11",
       "value": 8184,
-      "color": "#758bcf"
+      "color": "#B89DFB"
     }
   ],
   "areaChart": [
@@ -232,16 +232,6 @@
     {
       "name": "AE",
       "value": 0.03
-    }
-  ],
-  "fraudPieChart": [
-    {
-      "name": "No",
-      "value": 98.9
-    },
-    {
-      "name": "S\u00ed",
-      "value": 1.1
     }
   ],
   "correlationHeatmap": [
