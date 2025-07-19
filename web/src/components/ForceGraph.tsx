@@ -255,8 +255,8 @@ const ForceGraph: React.FC = () => {
         }}
       />
 
-      <div className="fixed lg:right-28 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 backdrop-blur-md rounded-xl space-y-3 opacity-80 bg-[#f9fafb] dark:bg-black/20">
-        <div className="text-md font-semibold dark:text-white/90 text-black/80">
+      <div className="fixed lg:right-28 sm:mt-20 sm:right-8 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 backdrop-blur-md rounded-xl space-y-3 opacity-80 bg-[#f9fafb] dark:bg-black/20 hidden sm:block">
+        <div className="lg:text-lg text-sm font-semibold dark:text-white/90 text-black/80">
           Cantidad de Transacciones
         </div>
 
@@ -268,7 +268,7 @@ const ForceGraph: React.FC = () => {
           return (
             <div
               key={label}
-              className="flex items-center justify-between text-sm"
+              className="flex items-center justify-between text-xs lg:text-sm"
             >
               <div className="flex items-center space-x-2">
                 <div
