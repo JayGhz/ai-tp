@@ -1,3 +1,6 @@
 env/
 web/package-lock.json
+trains/
 *.npy
+__pycache__/
+*.pyc
