@@ -30,7 +30,7 @@ const ForceGraph: React.FC = () => {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.5;
     renderer.outputColorSpace = THREE.SRGBColorSpace;
-    renderer.domElement.style.position = "fixed";
+    renderer.domElement.style.position = "absolute";
     renderer.domElement.style.top = "0";
     renderer.domElement.style.left = "0";
     renderer.domElement.style.zIndex = "0";
