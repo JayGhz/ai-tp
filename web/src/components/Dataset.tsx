@@ -26,7 +26,7 @@ export function Dataset() {
                 height="200"
                 src="Kaggle.png"
                 alt="kaggle"
-                className="order-1 object-contain w-64 h-64 p-6 md:order-2 rotate-3 lg:p-6 lg:w-64 rounded-2xl bg-black/30 dark:bg-zinc-500/5 ring-1 ring-black/70 dark:ring-white/20 transform-gpu animate-spinTilted"
+                className="order-1 object-contain w-64 h-64 p-6 md:order-2 rotate-3 lg:p-6 lg:w-64 rounded-2xl bg-black/30 dark:bg-zinc-200/5 ring-1 ring-black/70 dark:ring-white/20 transform-gpu animate-spinTilted"
                 />
         </article>
         <div className="mb-24"></div>

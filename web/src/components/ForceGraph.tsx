@@ -90,6 +90,7 @@ const ForceGraph: React.FC = () => {
     const rotationSpeed = 0.0025;
 
     let particles: any[] = [];
+    let radarPulses: any[] = [];
 
     const loadNodes = async () => {
       try {
@@ -106,6 +107,7 @@ const ForceGraph: React.FC = () => {
           const z = radius * Math.cos(phi);
           const pos = new THREE.Vector3(x, y, z);
           const baseColor = node.fraud ? 0xff4c58 : 0x27c0ff;
+
           const mat = new THREE.MeshStandardMaterial({
             color: baseColor,
             emissive: new THREE.Color(baseColor),
@@ -113,10 +115,12 @@ const ForceGraph: React.FC = () => {
             roughness: 0.2,
             toneMapped: false,
           });
+
           const mesh = new THREE.Mesh(geometry, mat);
           mesh.position.copy(pos);
           group.add(mesh);
-          particles.push({
+
+          const particle = {
             mesh,
             pos: pos.clone(),
             original: pos.clone(),
@@ -124,12 +128,60 @@ const ForceGraph: React.FC = () => {
             quaternion: new THREE.Quaternion(),
             baseColor: new THREE.Color(baseColor),
             isFraud: node.fraud,
-          });
+          };
+
+          particles.push(particle);
+
+          if (node.fraud) {
+            const ringGeo = new THREE.PlaneGeometry(0.6, 0.6);
+
+            const radarMat = new THREE.ShaderMaterial({
+              uniforms: {
+                uColor: { value: new THREE.Color(0xff4c58).multiplyScalar(0.6) },
+                uOpacity: { value: 0.0 },
+                uRadius: { value: 0.0 },
+              },
+              transparent: true,
+              depthWrite: false,
+              blending: THREE.AdditiveBlending,
+              vertexShader: `
+                            varying vec2 vUv;
+                            void main() {
+                              vUv = uv;
+                              gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                            }
+                          `,
+              fragmentShader: `
+                            uniform vec3 uColor;
+                            uniform float uOpacity;
+                            uniform float uRadius;
+                            varying vec2 vUv;
+                            void main() {
+                              float dist = distance(vUv, vec2(0.5));
+                              float alpha = smoothstep(uRadius, 0.0, dist);
+                              gl_FragColor = vec4(uColor, alpha * uOpacity);
+                            }
+                          `,
+            });
+            const pulse = new THREE.Mesh(ringGeo, radarMat);
+            pulse.position.copy(pos);
+            pulse.rotation.x = -Math.PI / 2;
+            group.add(pulse);
+
+            radarPulses.push({
+              mesh: pulse,
+              nodeRef: particle,
+              radius: 0.0,
+              opacity: 0.5,
+              speed: 0.008 + Math.random() * 0.005,
+            });
+          }
         });
       } catch (e) {
         console.error("nodes.json load error:", e);
       }
     };
+
 
     const update = () => {
       raycaster.setFromCamera(mousePos, camera);
@@ -145,6 +197,7 @@ const ForceGraph: React.FC = () => {
         if (inRange) {
           const dir = p.pos.clone().sub(mouse3D).normalize();
           p.velocity.add(dir.multiplyScalar(force * (1 + Math.random() * 0.2)));
+
           const intensity = THREE.MathUtils.lerp(
             maxGlowIntensity,
             baseGlowIntensity,
@@ -175,7 +228,23 @@ const ForceGraph: React.FC = () => {
         }
       });
 
+      radarPulses.forEach((pulse) => {
+        pulse.radius += pulse.speed;
+        pulse.opacity -= pulse.speed * 1.2;
+
+        if (pulse.opacity <= 0) {
+          pulse.radius = 0.0;
+          pulse.opacity = 0.5;
+        }
+
+        pulse.mesh.material.uniforms.uRadius.value = pulse.radius;
+        pulse.mesh.material.uniforms.uOpacity.value = pulse.opacity;
+        pulse.mesh.position.copy(pulse.nodeRef.pos);
+        pulse.mesh.lookAt(camera.position);
+      });
+
       group.rotation.y += rotationSpeed;
+
     };
 
     const animate = () => {
@@ -237,13 +306,12 @@ const ForceGraph: React.FC = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 w-full h-full z-[-1]" />
+      <div className="fixed top-0 left-0 w-full h-full" />
 
       <div
         ref={mountRef}
-        className={`canvas-container transition-opacity duration-[1200ms] ease-out ${
-          loading ? "opacity-0" : "opacity-100"
-        }`}
+        className={`canvas-container transition-opacity duration-[1200ms] ease-out ${loading ? "opacity-0" : "opacity-100"
+          }`}
         style={{
           width: "100%",
           height: "100%",
@@ -275,23 +343,6 @@ const ForceGraph: React.FC = () => {
                   className="w-3 h-3 mr-1 rounded-full"
                   style={{
                     backgroundColor: isFraudulent ? "#ff4c58" : "#27c0ff",
-                    animation:
-                      isFraudulent
-                        ? "neonPulse 1.8s ease-out infinite"
-                        : "none",
-                    boxShadow:
-                      isFraudulent
-                        ? `
-                        0 0 3px #ff4c58,
-                        0 0 6px #ff4c58,
-                        0 0 10px #ff4c58,
-                        0 0 20px #ff4c58
-                        `
-                        : `
-                        0 0 3px #27c0ff,
-                        0 0 6px #27c0ff,
-                        0 0 10px #27c0ff,
-                        0 0 20px #27c0ff`,
                   }}
                 />
                 <span className="dark:text-white/80 text-black/80">{label}</span>
@@ -302,35 +353,6 @@ const ForceGraph: React.FC = () => {
             </div>
           );
         })}
-
-        <style>{`
-          @keyframes neonPulse {
-            0% {
-              box-shadow:
-                0 0 6px #ff4c58,
-                0 0 12px #ff4c58,
-                0 0 20px #ff4c58,
-                0 0 40px #ff4c58,
-                0 0 0 0 rgba(39, 192, 255, 0.6);
-            }
-            70% {
-              box-shadow:
-                0 0 6px #ff4c58,
-                0 0 12px #ff4c58,
-                0 0 20px #ff4c58,
-                0 0 40px #ff4c58,
-                0 0 0 10px rgba(39, 192, 255, 0);
-            }
-            100% {
-              box-shadow:
-                0 0 6px #ff4c58,
-                0 0 12px #ff4c58,
-                0 0 20px #ff4c58,
-                0 0 40px #ff4c58,
-                0 0 0 0 rgba(39, 192, 255, 0);
-            }
-          }
-        `}</style>
       </div>
     </>
   );
