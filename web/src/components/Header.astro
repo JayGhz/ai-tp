@@ -40,7 +40,7 @@ const navItems = [
       navItems.map(({ url, title, label }) => (
         <a
           class="relative block px-2 py-2 transition hover hover:font-bold hover:text-[#27c0ff] nav-item"
-          href="#"
+          href={url}
           data-section={url.replace("#", "")}
           aria-label={label}
         >

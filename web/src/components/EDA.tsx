@@ -51,7 +51,7 @@ export default function EDA() {
 
                 <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
                     <div className="text-sm dark:text-zinc-200/90 font-semibold text-center mb-2">
-                        Distribucion por Estado de Vivienda
+                        Distribución por Estado de Vivienda
                     </div>
                     <div className="w-full h-full">
                         <BarChartVertical />
@@ -60,7 +60,7 @@ export default function EDA() {
 
                 <div className="border border-zinc-300 dark:border-zinc-200/20 rounded-xl p-6">
                     <div className="text-sm dark:text-zinc-200/90 font-semibold text-center mb-2">
-                        Distribucion por Sistema Operativo
+                        Distribución por Sistema Operativo
                     </div>
                     <div className="w-full h-full">
                         <HorizontalBarChartLogos />
