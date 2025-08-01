@@ -41,7 +41,7 @@ const navItems = [
         <a
           class="relative block px-2 py-2 transition hover hover:font-bold hover:text-[#27c0ff] nav-item"
           href={url}
-          data-section={url.replace("#", "")}
+          data-section={url || "inicio"}
           aria-label={label}
         >
           {title}
@@ -68,7 +68,7 @@ const navItems = [
     localStorage.setItem('activeSection', section);
     
     const customEvent = new CustomEvent("sectionChange", {
-      detail: { section: section || "graph" },
+      detail: { section: section || "inicio" },
       bubbles: true
     });
     
@@ -77,7 +77,7 @@ const navItems = [
 
   function initNavigation() {
     const navItems = document.querySelectorAll(".nav-item");
-    const activeSection = localStorage.getItem('activeSection') || 'graph';
+    const activeSection = localStorage.getItem('activeSection') || 'inicio';
 
     navItems.forEach(item => {
       item.removeEventListener("click", handleNavClick);
