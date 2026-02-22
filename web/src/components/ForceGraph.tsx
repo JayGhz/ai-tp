@@ -10,6 +10,46 @@ const ForceGraph: React.FC = () => {
   const mountRef = useRef<HTMLDivElement>(null);
   const [loading, setLoading] = useState(true);
 
+  const [boxPos, setBoxPos] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const dragRef = useRef({ startX: 0, startY: 0, lastX: 0, lastY: 0 });
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsDragging(true);
+    dragRef.current = {
+      startX: e.clientX,
+      startY: e.clientY,
+      lastX: boxPos.x,
+      lastY: boxPos.y
+    };
+  };
+
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!isDragging) return;
+      const dx = e.clientX - dragRef.current.startX;
+      const dy = e.clientY - dragRef.current.startY;
+      setBoxPos({
+        x: dragRef.current.lastX + dx,
+        y: dragRef.current.lastY + dy
+      });
+    };
+
+    const handleMouseUp = () => {
+      setIsDragging(false);
+    };
+
+    if (isDragging) {
+      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mouseup', handleMouseUp);
+    }
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('mouseup', handleMouseUp);
+    };
+  }, [isDragging]);
+
   useEffect(() => {
     if (!mountRef.current) return;
 
@@ -323,7 +363,11 @@ const ForceGraph: React.FC = () => {
         }}
       />
 
-      <div className="fixed lg:right-28 sm:mt-20 sm:right-8 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 backdrop-blur-md rounded-xl space-y-3 opacity-80 bg-[#f9fafb] dark:bg-black/20 hidden sm:block">
+      <div 
+        className={`fixed lg:right-28 sm:mt-20 sm:right-8 right-20 lg:mt-[18rem] z-10 mt-52 max-w-xs p-6 backdrop-blur-md rounded-xl space-y-3 opacity-80 bg-[#f9fafb] dark:bg-black/20 hidden sm:block select-none ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+        style={{ transform: `translate(${boxPos.x}px, ${boxPos.y}px)` }}
+        onMouseDown={handleMouseDown}
+      >
         <div className="lg:text-lg text-sm font-semibold dark:text-white/90 text-black/80">
           Cantidad de Transacciones
         </div>
